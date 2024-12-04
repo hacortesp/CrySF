@@ -1,0 +1,1136 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>libraries.CrySF &#8212; CrySF 1.0.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/libraries/CrySF';</script>
+    <link rel="shortcut icon" href="../../_static/Icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/Icon.png" class="logo__image only-light" alt="CrySF 1.0.0 documentation - Home"/>
+    <script>document.write(`<img src="../../_static/Icon.png" class="logo__image only-dark" alt="CrySF 1.0.0 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Usage</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../source/Use.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/Settings.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/CrySF.html">CrySF modules</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for libraries.CrySF</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">cKDTree</span>
+
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span><span class="p">,</span> <span class="n">Counter</span><span class="p">,</span><span class="n">defaultdict</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">NearestNeighbors</span> 
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">silhouette_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span><span class="p">,</span> <span class="n">MinMaxScaler</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.font_manager</span> <span class="kn">import</span> <span class="n">FontProperties</span>
+<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">MaxNLocator</span>
+<span class="kn">import</span> <span class="nn">seaborn</span>           <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">()</span>
+
+<span class="n">kmeans_kwargs</span>   <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="s1">&#39;random&#39;</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-04</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<div class="viewcode-block" id="CrySF"><a class="viewcode-back" href="../../source/CrySF.html#libraries.CrySF.CrySF">[docs]</a><span class="k">class</span> <span class="nc">CrySF</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timestep</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">minv</span> <span class="o">=</span> <span class="mf">0.28</span><span class="p">,</span> <span class="n">maxv</span> <span class="o">=</span> <span class="mf">3.05</span><span class="p">,</span> 
+                 <span class="n">verbosity</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">deltframes</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">scaler</span> <span class="o">=</span> <span class="s1">&#39;MinMaxScaler&#39;</span><span class="p">,</span>
+                 <span class="n">clustering</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="n">doped</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+     
+        <span class="bp">self</span><span class="o">.</span><span class="n">density_map_targ</span> <span class="o">=</span> <span class="s1">&#39;DensityMap.dat&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">out_file</span> <span class="o">=</span> <span class="s1">&#39;SitesMap.dat&#39;</span>            
+        <span class="bp">self</span><span class="o">.</span><span class="n">time_frames</span> <span class="o">=</span> <span class="n">timestep</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">minv</span> <span class="o">=</span> <span class="n">minv</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">maxv</span> <span class="o">=</span> <span class="n">maxv</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">verbosity</span> <span class="o">=</span> <span class="n">verbosity</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clustering</span> <span class="o">=</span> <span class="n">clustering</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">doped</span> <span class="o">=</span> <span class="n">doped</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">deltf</span> <span class="o">=</span> <span class="n">deltframes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scaler</span> <span class="o">=</span> <span class="n">scaler</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">font_properties</span> <span class="o">=</span> <span class="n">FontProperties</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s1">&#39;serif&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;normal&#39;</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="s1">&#39;normal&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_site_analysis</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_read_density_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_density</span><span class="p">):</span>        
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_density</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>            
+            <span class="n">first_line</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="n">dl</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">first_line</span><span class="p">[</span><span class="mi">6</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">first_line</span><span class="p">[</span><span class="mi">7</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">first_line</span><span class="p">[</span><span class="mi">8</span><span class="p">])]</span>
+
+            <span class="n">density</span><span class="p">,</span> <span class="n">xyz</span><span class="p">,</span> <span class="n">index_voxels</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="p">[(</span><span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]],</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">4</span><span class="p">]))</span>
+                                        <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">)])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dl</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">dl</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">voxel_vol</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">dl</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">dl</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">xyz_map</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="n">xyz</span><span class="p">)))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pbc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">max</span><span class="p">(</span><span class="n">xyz_map</span><span class="p">[:,</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)])</span>        
+        <span class="bp">self</span><span class="o">.</span><span class="n">eps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">total_time</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_frames</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time_frames</span><span class="p">)</span>
+        <span class="n">density_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">density</span><span class="p">))</span>        
+        <span class="n">index_voxels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">index_voxels</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">density_values</span><span class="p">,</span> <span class="n">xyz_map</span><span class="p">,</span> <span class="n">index_voxels</span>
+    
+    <span class="k">def</span> <span class="nf">_clustering_pbc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+        <span class="n">min_samples</span> <span class="o">=</span> <span class="mi">12</span> <span class="c1">#the number of NN voxels </span>
+        <span class="n">X_mod</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mod</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pbc</span><span class="p">)</span>
+        <span class="n">tree</span> <span class="o">=</span> <span class="n">cKDTree</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">X_mod</span><span class="p">,</span> <span class="n">boxsize</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pbc</span><span class="p">)</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">query_ball_tree</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eps</span><span class="p">)</span>
+        
+        <span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">fill_value</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>  <span class="c1"># Initialize all points as noise</span>
+        <span class="n">visited</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>  <span class="c1"># Keep track of visited points to avoid redundancy</span>
+        <span class="n">cluster_id</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">neighbors</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">indices</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">neighbors</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">min_samples</span> <span class="ow">and</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>  <span class="c1"># Check if not visited for efficiency</span>
+                <span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">cluster_id</span>
+                <span class="n">visited</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                <span class="n">points_to_visit</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="n">neighbors</span><span class="p">)</span>  <span class="c1"># Use deque for efficient queue operations</span>
+                
+                <span class="k">while</span> <span class="n">points_to_visit</span><span class="p">:</span>
+                    <span class="n">point</span> <span class="o">=</span> <span class="n">points_to_visit</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+                    <span class="k">if</span> <span class="n">point</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>  <span class="c1"># Check if not visited</span>
+                        <span class="n">visited</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+                        <span class="n">labels</span><span class="p">[</span><span class="n">point</span><span class="p">]</span> <span class="o">=</span> <span class="n">cluster_id</span>
+                        <span class="n">new_neighbors</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">query_ball_point</span><span class="p">(</span><span class="n">X_mod</span><span class="p">[</span><span class="n">point</span><span class="p">],</span> <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eps</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_neighbors</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">min_samples</span><span class="p">:</span>
+                            <span class="n">points_to_visit</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_neighbors</span><span class="p">)</span>
+                <span class="n">cluster_id</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">labels</span>
+    
+    <span class="k">def</span> <span class="nf">_sites_cova_pca</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">voxel_coor</span><span class="p">,</span> <span class="n">labels_cut</span><span class="p">):</span>
+        <span class="n">max_label</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">labels_cut</span><span class="p">)</span>
+        <span class="n">cluster_spatial_cova</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">half_pbc</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">pbc</span>
+        <span class="n">pbc_correction_factors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">half_pbc</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pbc</span><span class="p">,</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">pbc</span><span class="p">])</span>
+
+        <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_label</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>            
+            <span class="n">cluster_coor</span> <span class="o">=</span> <span class="n">voxel_coor</span><span class="p">[</span><span class="n">labels_cut</span> <span class="o">==</span> <span class="n">label</span><span class="p">]</span>            
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">cluster_coor</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+               
+                <span class="n">distances</span> <span class="o">=</span> <span class="n">cluster_coor</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:]</span> <span class="o">-</span> <span class="n">cluster_coor</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span>
+                <span class="n">distance_pos</span> <span class="o">=</span> <span class="p">(</span><span class="n">distances</span> <span class="o">&gt;</span> <span class="n">half_pbc</span><span class="p">)</span> <span class="o">*</span> <span class="n">pbc_correction_factors</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">distance_neg</span> <span class="o">=</span> <span class="p">(</span><span class="n">distances</span> <span class="o">&lt;</span> <span class="o">-</span><span class="n">half_pbc</span><span class="p">)</span> <span class="o">*</span> <span class="n">pbc_correction_factors</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+                <span class="n">adjusted_distances</span> <span class="o">=</span> <span class="n">distances</span> <span class="o">-</span> <span class="p">(</span><span class="n">distance_pos</span> <span class="o">+</span> <span class="n">distance_neg</span><span class="p">)</span>
+
+                <span class="n">cluster_coor_adjusted</span> <span class="o">=</span> <span class="n">cluster_coor</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">adjusted_distances</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">dl</span>
+                <span class="c1"># Check if there are enough samples and features</span>
+                <span class="n">n_samples</span><span class="p">,</span> <span class="n">n_features</span> <span class="o">=</span> <span class="n">cluster_coor_adjusted</span><span class="o">.</span><span class="n">shape</span>
+                <span class="k">if</span> <span class="n">n_samples</span> <span class="o">&gt;=</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">n_features</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+                    <span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">svd_solver</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">)</span>
+                    <span class="n">pca</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">cluster_coor_adjusted</span><span class="p">)</span>
+                    <span class="n">cluster_spatial_cova</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># Handle cases where there are not enough samples or features</span>
+                    <span class="c1"># For example, append zeros, handle differently, or log an error                   </span>
+                    <span class="n">cluster_spatial_cova</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">])</span>  <span class="c1"># Example fallback</span>
+      
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cluster_spatial_cova</span><span class="p">)</span>
+ 
+    <span class="k">def</span> <span class="nf">_write_cluster_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">out_file</span><span class="p">):</span>
+        <span class="c1">#out_file = &#39;SitesMap_OVITO.dat&#39;</span>
+        <span class="n">total_atoms</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">coordinates</span><span class="p">)</span>
+        <span class="n">atom_types</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">labels</span><span class="p">))</span>
+        <span class="n">bounds_template</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{0:.8f}</span><span class="s2"> </span><span class="si">{1}</span><span class="s2"> </span><span class="si">{2}</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">atom_line_template</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{:&lt;10d}{:&lt;10d}{:&lt;12.6f}{:&lt;12.6f}{:&lt;12.6f}</span><span class="se">\n</span><span class="s2">&quot;</span>
+        
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">out_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;LAMMPS data file via OVITO</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">total_atoms</span><span class="si">}</span><span class="s2"> atoms</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">atom_types</span><span class="si">}</span><span class="s2"> atom types</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">bounds_template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pbc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">dl</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;xlo xhi&quot;</span><span class="p">))</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">bounds_template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pbc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">dl</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;ylo yhi&quot;</span><span class="p">))</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">bounds_template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pbc</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">dl</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;zlo zhi&quot;</span><span class="p">))</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Masses</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">atom_types</span><span class="p">):</span>
+                <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> 1.0</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Atoms # atomic</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">coord</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">coordinates</span><span class="p">):</span>
+                <span class="n">scaled_coord</span> <span class="o">=</span> <span class="n">coord</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">dl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>              
+                <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">atom_line_template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="n">scaled_coord</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">_find_density_cutoff</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">density_values</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">xyz_map</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">index_voxels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_density_map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">density_map_targ</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&gt;&gt; Finding the density cutoff for clustering &lt;&lt;&#39;</span><span class="p">)</span>
+        <span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">density_values</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>        
+        <span class="n">max_bin_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">value_i</span> <span class="o">=</span> <span class="n">bins</span><span class="p">[</span><span class="n">max_bin_index</span><span class="p">]</span>
+        <span class="n">value_s</span> <span class="o">=</span> <span class="n">bins</span><span class="p">[</span><span class="n">max_bin_index</span> <span class="o">+</span> <span class="mi">8</span><span class="p">]</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">value_i</span><span class="p">,</span> <span class="n">value_s</span> <span class="o">+</span> <span class="n">value_i</span><span class="p">,</span> <span class="n">value_i</span><span class="p">)</span> 
+        <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">cut</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_values</span><span class="p">:</span>           
+            <span class="n">mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">density_values</span> <span class="o">&gt;</span> <span class="n">cut</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">voxel_coor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xyz_map</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>             
+            <span class="bp">self</span><span class="o">.</span><span class="n">rho_values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">density_values</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">voxel_indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">index_voxels</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+            
+            <span class="c1"># Get the number of clusters(sites) for the new density cutoff</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cut_labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clustering_pbc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">voxel_coor</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">n_clusters_cut</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cut_labels</span><span class="p">))</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span> <span class="k">if</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cut_labels</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span> 
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_clusters_cut</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_atoms</span><span class="p">:</span>                                                 
+                <span class="bp">self</span><span class="o">.</span><span class="n">cluster_spatial_corr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sites_cova_pca</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">voxel_coor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cut_labels</span><span class="p">)</span>
+              
+                <span class="n">max_variance</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dl</span><span class="o">/</span><span class="mi">2</span>
+                <span class="n">delt_variance</span> <span class="o">=</span> <span class="p">[]</span>
+                
+                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cluster_spatial_corr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+                    <span class="n">cluster_spatial</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cluster_spatial_corr</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+                    
+                    <span class="n">nn1d</span> <span class="o">=</span> <span class="n">NearestNeighbors</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">cluster_spatial</span><span class="p">)</span>
+                    <span class="n">distances_nn1d</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">nn1d</span><span class="o">.</span><span class="n">kneighbors</span><span class="p">(</span><span class="n">cluster_spatial</span><span class="p">)</span>
+                    <span class="n">distances_nn1d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">distances_nn1d</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">delt_variance</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">distances_nn1d</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="n">delt_variance</span> <span class="o">&lt;</span> <span class="n">max_variance</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+                    <span class="c1"># Predict the correct number of type sites</span>
+                    <span class="n">all_clusters</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+                    <span class="n">silhouette_averages</span> <span class="o">=</span> <span class="p">[]</span> 
+                    <span class="n">labels_shapes_aux</span> <span class="o">=</span><span class="p">[]</span>
+
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">scaler</span> <span class="o">==</span> <span class="s1">&#39;MinMaxScaler&#39;</span><span class="p">:</span>
+                        <span class="n">data</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cluster_spatial_corr</span><span class="p">)</span>  
+                    <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">scaler</span> <span class="o">==</span> <span class="s1">&#39;StandardScaler&#39;</span><span class="p">:</span>
+                        <span class="n">data</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cluster_spatial_corr</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="s1">&#39;Error: Scaler method not recognized&#39;</span><span class="p">)</span> 
+
+                    <span class="k">for</span> <span class="n">n_clusters</span> <span class="ow">in</span> <span class="n">all_clusters</span><span class="p">:</span>                        
+                        <span class="n">clustering</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">n_clusters</span><span class="p">,</span><span class="o">**</span><span class="n">kmeans_kwargs</span><span class="p">)</span>                                             
+                        <span class="n">labels</span> <span class="o">=</span> <span class="n">clustering</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> 
+                        <span class="n">labels_shapes_aux</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+                        <span class="n">silhouette_averages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">silhouette_score</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">labels</span><span class="p">))</span>                   
+
+                    <span class="n">n_clusters</span> <span class="o">=</span> <span class="n">all_clusters</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">silhouette_averages</span><span class="p">)]</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">silhouette_averages</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.4</span><span class="p">):</span>
+                        <span class="n">n_clusters</span> <span class="o">=</span> <span class="mi">1</span>
+          
+                    <span class="k">if</span> <span class="n">n_clusters</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">labels_shapes</span> <span class="o">=</span> <span class="n">labels_shapes_aux</span><span class="p">[</span><span class="n">n_clusters</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">labels_shapes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">labels_shapes_aux</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+                    <span class="n">upper_size_limit</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">maxv</span><span class="o">/</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">voxel_vol</span><span class="p">)))</span> <span class="c1"># volume of sphere with r=0.90 </span>
+                    <span class="n">lower_size_limit</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">minv</span><span class="o">/</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">voxel_vol</span><span class="p">)))</span> <span class="c1"># volume of sphere with r=0.30                    </span>
+
+                    <span class="n">number_voxels</span> <span class="o">=</span>  <span class="n">Counter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cut_labels</span><span class="p">)</span>
+
+                    <span class="c1"># Remove the key-value pair with key -1</span>
+                    <span class="k">if</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">in</span> <span class="n">number_voxels</span><span class="p">:</span>
+                        <span class="k">del</span> <span class="n">number_voxels</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+                    <span class="n">wrong_sites</span> <span class="o">=</span> <span class="kc">False</span>
+                    <span class="c1"># Iterate through the Counter and check values</span>
+                    <span class="n">values_arr</span> <span class="o">=</span> <span class="p">[]</span>
+                    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">number_voxels</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                        <span class="n">values_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>       
+                        <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="n">upper_size_limit</span> <span class="ow">or</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="n">lower_size_limit</span><span class="p">:</span>                            
+                            <span class="n">wrong_sites</span> <span class="o">=</span> <span class="kc">True</span>
+                            <span class="k">break</span>
+                    
+                    <span class="n">coordinates</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">voxel_coor</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">cut_labels</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cut_labels</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">cut_labels</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                                        
+                    <span class="n">count_labels_shapes</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels_shapes</span><span class="p">)</span>
+                    <span class="c1"># ions% in each of type site could be different?</span>
+                    <span class="n">unique_elements</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">count_labels_shapes</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">count</span> <span class="o">&lt;=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_atoms</span> <span class="o">*</span> <span class="mf">0.10</span><span class="p">)]</span>
+ 
+                    <span class="k">if</span>  <span class="n">wrong_sites</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_elements</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span> 
+                        <span class="k">continue</span>
+                    <span class="k">else</span><span class="p">:</span>                  
+                        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Final Density cutoff: </span><span class="si">{:.4f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cut</span><span class="p">))</span> 
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_plot_cluster_shapes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cluster_spatial_corr</span><span class="p">,</span> <span class="s1">&#39;site_shapes_variance.png&#39;</span> <span class="p">)</span> 
+
+                        <span class="n">smaller_site</span> <span class="o">=</span> <span class="mi">1</span>
+                        <span class="k">if</span> <span class="n">smaller_site</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">jump_cut</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_values</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cutoff_values</span> <span class="o">==</span> <span class="n">cut</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">jump_cut</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_values</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cutoff_values</span> <span class="o">==</span> <span class="n">cut</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">8</span><span class="p">]</span>
+
+                        <span class="c1"># Write cluster map to be opened with OVITO </span>
+                        <span class="n">coordinates</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">voxel_coor</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">cut_labels</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                        <span class="n">labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cut_labels</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">cut_labels</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_write_cluster_map</span><span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="s1">&#39;SitesMap_OVITO.dat&#39;</span><span class="p">)</span>              
+                        <span class="k">break</span>  
+    
+        <span class="k">if</span> <span class="n">cut</span> <span class="o">&gt;=</span> <span class="n">value_s</span> <span class="ow">and</span><span class="p">(</span><span class="n">wrong_sites</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_elements</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">!!Density cutoff not found!!</span><span class="se">\n</span><span class="s1"> Adjust voxel size or review trajectory</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_center_sites</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">voxel_coor</span><span class="p">,</span> <span class="n">labels_cut</span><span class="p">):</span>     
+        <span class="n">max_label</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">labels_cut</span><span class="p">)</span>
+        <span class="n">centers</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">cluster_labels</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">max_distances</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_label</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">cluster_coor</span> <span class="o">=</span> <span class="n">voxel_coor</span><span class="p">[</span><span class="n">labels_cut</span> <span class="o">==</span> <span class="n">label</span><span class="p">]</span>
+
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cluster_coor</span><span class="p">)):</span>
+                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cluster_coor</span><span class="p">)):</span>
+                    <span class="n">distance</span> <span class="o">=</span> <span class="n">cluster_coor</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="n">cluster_coor</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                    <span class="n">distance_pos</span> <span class="o">=</span> <span class="p">(</span><span class="n">distance</span> <span class="o">&gt;</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">pbc</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">pbc</span>
+                    <span class="n">distance_neg</span> <span class="o">=</span> <span class="p">(</span><span class="n">distance</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">pbc</span><span class="p">)</span> <span class="o">*</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">pbc</span>
+                    <span class="n">cluster_coor</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">-=</span> <span class="p">(</span><span class="n">distance_pos</span> <span class="o">+</span> <span class="n">distance_neg</span><span class="p">)</span>
+
+            <span class="n">center</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">cluster_coor</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">max_distance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">cluster_coor</span> <span class="o">-</span> <span class="n">center</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">))</span>
+            
+            <span class="n">centers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">center</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">dl</span><span class="p">)</span>
+            <span class="n">cluster_labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+            <span class="n">max_distances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">max_distance</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">dl</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>        
+    
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">centers</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cluster_labels</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">max_distances</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_rho_sites</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">m_rho</span><span class="p">,</span> <span class="n">label_clust</span><span class="p">):</span>      
+        <span class="n">total_rho_cluster</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">m_rho</span><span class="p">[</span><span class="n">label_clust</span> <span class="o">==</span> <span class="n">i</span><span class="p">])</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">label_clust</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">total_rho_cluster</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_number_neighbors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">centers_coor</span><span class="p">,</span> <span class="n">labels_type</span><span class="p">):</span>
+        
+        <span class="n">box_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pbc</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">dl</span>
+        <span class="n">centers_coor</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mod</span><span class="p">(</span><span class="n">centers_coor</span><span class="p">,</span> <span class="n">box_size</span><span class="p">)</span>
+        <span class="n">tree</span> <span class="o">=</span> <span class="n">cKDTree</span><span class="p">(</span><span class="n">centers_coor</span><span class="p">,</span> <span class="n">boxsize</span><span class="o">=</span><span class="n">box_size</span><span class="p">)</span>
+        <span class="n">distances</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">centers_coor</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+                
+        <span class="n">cutoff_nn</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">ty</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">labels_type</span><span class="p">):</span>
+            <span class="n">cutoff</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">distances</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">labels_type</span> <span class="o">==</span> <span class="n">ty</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="mf">1.20</span>
+            <span class="n">cutoff_nn</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cutoff</span><span class="p">)</span>        
+
+        <span class="n">nn_neighbors</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">id_center</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">centers_coor</span><span class="p">)):</span>
+            <span class="n">ty</span> <span class="o">=</span> <span class="n">labels_type</span><span class="p">[</span><span class="n">id_center</span><span class="p">]</span>            
+            <span class="n">nn_site</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tree</span><span class="o">.</span><span class="n">query_ball_point</span><span class="p">(</span><span class="n">centers_coor</span><span class="p">[</span><span class="n">id_center</span><span class="p">],</span> <span class="n">cutoff_nn</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">ty</span><span class="p">)]))</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="n">nn_neighbors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nn_site</span><span class="p">)</span>
+      
+        <span class="k">return</span> <span class="n">cutoff_nn</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">nn_neighbors</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_write_outputs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">out_file</span><span class="p">,</span> <span class="n">info</span><span class="p">):</span>        
+        <span class="n">header</span> <span class="o">=</span> <span class="s1">&#39;#Site-label   Center(X)   Center(Y)   Center(Z)  Site-Type   N-Neighbors   Occupancy  Site-Amplitud&#39;</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">out_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">header</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">info</span><span class="p">:</span>                
+                <span class="n">formatted_row</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:^12}{:^12.6f}{:^12.6f}{:^12.6f}{:^12}{:^12}{:^13.6f}{:^13.6f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">i</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span>
+                    <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">3</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">4</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">5</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span>                    
+                <span class="p">)</span>
+                <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">formatted_row</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">def</span> <span class="nf">_read_voxel_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">voxels_visited_file</span><span class="p">):</span>        
+        <span class="n">voxel_indices</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">voxels_visited_file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="nb">next</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>  <span class="c1"># Skip the first line (header)</span>
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>               
+                <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+                <span class="n">voxel_indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">voxel_indices</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">_atom_jumps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">voxel_indices_time</span><span class="p">,</span> <span class="n">cut_labels</span><span class="p">,</span> <span class="n">voxel_indices</span><span class="p">,</span>\
+                     <span class="n">n_frames</span><span class="p">):</span>
+        
+        <span class="k">def</span> <span class="nf">interstice_remover</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+            <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+            <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">shape</span>
+                    
+            <span class="c1"># Track last valid values used for replacement for each row</span>
+            <span class="n">last_valid_values</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">rows</span>
+            
+            <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cols</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                        <span class="c1"># Replace with the last valid value if it exists</span>
+                        <span class="k">if</span> <span class="n">last_valid_values</span><span class="p">[</span><span class="n">row</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                            <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_valid_values</span><span class="p">[</span><span class="n">row</span><span class="p">]</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="c1"># Search for a valid replacement in future columns</span>
+                            <span class="k">for</span> <span class="n">next_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">col</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">cols</span><span class="p">):</span>
+                                <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">next_col</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+                                    <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">next_col</span><span class="p">]</span>
+                                    <span class="n">last_valid_values</span><span class="p">[</span><span class="n">row</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">next_col</span><span class="p">]</span>
+                                    <span class="k">break</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">last_valid_values</span><span class="p">[</span><span class="n">row</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">arr</span>
+
+        <span class="k">def</span> <span class="nf">find_connected_jumps</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">simultaneous_jumps</span><span class="p">):</span>
+            <span class="n">visited</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+            <span class="n">components</span> <span class="o">=</span> <span class="p">[]</span>
+
+            <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">graph</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">node</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>
+                    <span class="n">stack</span> <span class="o">=</span> <span class="p">[</span><span class="n">node</span><span class="p">]</span>
+                    <span class="n">component</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+                    <span class="n">component_pairs</span> <span class="o">=</span> <span class="p">[]</span>
+
+                    <span class="k">while</span> <span class="n">stack</span><span class="p">:</span>
+                        <span class="n">current</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+                        <span class="k">if</span> <span class="n">current</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited</span><span class="p">:</span>
+                            <span class="n">visited</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">current</span><span class="p">)</span>
+                            <span class="n">component</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">current</span><span class="p">)</span>
+                            <span class="n">stack</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">graph</span><span class="p">[</span><span class="n">current</span><span class="p">]</span> <span class="o">-</span> <span class="n">visited</span><span class="p">)</span>
+                            
+                    <span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">simultaneous_jumps</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">pair</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="n">component</span> <span class="ow">or</span> <span class="n">pair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">component</span><span class="p">:</span>
+                            <span class="n">component_pairs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pair</span><span class="p">)</span>
+                    <span class="n">components</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">component_pairs</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">components</span>
+
+        <span class="k">def</span> <span class="nf">find_nearest_non_negative_left</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+            <span class="n">left</span> <span class="o">=</span> <span class="n">index</span>
+            <span class="k">while</span> <span class="n">left</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">arr</span><span class="p">[</span><span class="n">left</span><span class="p">]</span>
+                <span class="n">left</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="k">def</span> <span class="nf">find_nearest_non_negative_right</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+            <span class="n">right</span> <span class="o">=</span> <span class="n">index</span>
+            <span class="k">while</span> <span class="n">right</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">right</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">arr</span><span class="p">[</span><span class="n">right</span><span class="p">]</span>
+                <span class="n">right</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">return</span> <span class="kc">None</span>
+              
+        <span class="n">mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">density_values</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">jump_cut</span>
+        <span class="n">voxel_coor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xyz_map</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>        
+        <span class="n">voxel_indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">index_voxels</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+        <span class="n">cut_labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clustering_pbc</span><span class="p">(</span><span class="n">voxel_coor</span><span class="p">)</span>
+        <span class="n">n_clusters_cut</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">cut_labels</span><span class="p">))</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span> <span class="k">if</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">in</span> <span class="n">cut_labels</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span> 
+
+        <span class="k">if</span> <span class="n">n_clusters_cut</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_clusters_cut</span><span class="p">:</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: Site count mismatch. Jump analysis: </span><span class="si">{</span><span class="n">n_clusters_cut</span><span class="si">}</span><span class="s2">, Sites analysis: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">n_clusters_cut</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+        <span class="n">atoms_jumps_indices</span> <span class="o">=</span> <span class="p">[];</span> <span class="n">atoms_jumps_reverse_indices</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">njumps_time</span> <span class="o">=</span> <span class="p">[];</span> <span class="n">njumps_time_noreverse</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">sites_visited_atom</span> <span class="o">=</span> <span class="p">[];</span> <span class="n">atoms_paths</span> <span class="o">=</span> <span class="p">[];</span> <span class="n">omega</span> <span class="o">=</span> <span class="p">[]</span> 
+        <span class="n">index_label_map</span> <span class="o">=</span> <span class="p">{</span><span class="n">index</span><span class="p">:</span> <span class="n">label</span> <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">voxel_indices</span><span class="p">,</span> <span class="n">cut_labels</span><span class="p">)}</span>
+                
+        <span class="n">nframes_allow</span> <span class="o">=</span> <span class="p">(</span><span class="n">n_frames</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltf</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltf</span>     
+        
+        <span class="k">for</span> <span class="n">indices_atom</span> <span class="ow">in</span> <span class="n">voxel_indices_time</span><span class="p">:</span>
+            <span class="n">mapped_labels_time</span> <span class="o">=</span> <span class="p">[</span><span class="n">index_label_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">indices_atom</span><span class="p">]</span>
+            <span class="n">atom_path</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">mapped_labels_time</span><span class="p">)</span>
+            <span class="n">atom_path</span> <span class="o">=</span> <span class="n">atom_path</span><span class="p">[:</span><span class="n">nframes_allow</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltf</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">atom_path_reshape</span> <span class="o">=</span> <span class="n">atom_path</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltf</span><span class="p">)</span>
+                <span class="n">atom_path</span> <span class="o">=</span> <span class="n">atom_path_reshape</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> 
+
+            <span class="n">atoms_paths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">atom_path</span><span class="p">)</span>
+
+        <span class="n">atoms_paths_filtered</span> <span class="o">=</span> <span class="n">interstice_remover</span><span class="p">(</span><span class="n">atoms_paths</span><span class="p">)</span>   
+
+        <span class="c1"># Calculate how many frames have atoms in interstice (-1 values)</span>
+        <span class="n">negative_counts</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">row</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">atoms_paths_filtered</span> <span class="k">if</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">in</span> <span class="n">row</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">negative_counts</span><span class="p">:</span>
+            <span class="n">average_negatives_per_row</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">negative_counts</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">average_negatives_per_row</span> <span class="o">=</span> <span class="mi">0</span> 
+
+        <span class="k">if</span> <span class="n">average_negatives_per_row</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>         
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Suggestion: Increase -deltf (current -1 average count per line: </span><span class="si">{</span><span class="n">average_negatives_per_row</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>   
+
+        <span class="k">for</span> <span class="n">atom_path</span> <span class="ow">in</span> <span class="n">atoms_paths_filtered</span><span class="p">:</span>            
+            <span class="c1"># Calculating simultaneous jumps</span>
+            <span class="n">atom_paths_not_noise</span> <span class="o">=</span> <span class="n">atom_path</span><span class="p">[</span><span class="n">atom_path</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">]</span>
+            <span class="n">atom_paths_original_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">atom_path</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>  
+            <span class="n">site_change</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">atom_paths_not_noise</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">atom_paths_not_noise</span><span class="p">[</span><span class="mi">1</span><span class="p">:])[</span><span class="mi">0</span><span class="p">]</span>
+            
+            <span class="n">sites_changes_i</span> <span class="o">=</span> <span class="n">atom_paths_original_indices</span><span class="p">[</span><span class="n">site_change</span><span class="p">]</span>
+            <span class="n">sites_changes_f</span> <span class="o">=</span> <span class="n">atom_paths_original_indices</span><span class="p">[</span><span class="n">site_change</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+
+            <span class="c1"># simultaneous jumps calculation ends</span>
+            <span class="n">jump_site_labels_i</span> <span class="o">=</span> <span class="n">atom_path</span><span class="p">[</span><span class="n">sites_changes_i</span><span class="p">]</span>
+            <span class="n">jump_site_labels_f</span> <span class="o">=</span> <span class="n">atom_path</span><span class="p">[</span><span class="n">sites_changes_f</span><span class="p">]</span>
+            
+            <span class="n">sites_changes_back</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">jump_site_labels_i</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">jump_site_labels_f</span><span class="p">[</span><span class="mi">1</span><span class="p">:])[</span><span class="mi">0</span><span class="p">]</span>   
+            
+            <span class="n">jumps_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">atom_path</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">sites_changes_i</span> <span class="p">,</span> <span class="n">sites_changes_f</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">end</span> <span class="o">==</span> <span class="n">start</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">jumps_arr</span><span class="p">[</span><span class="n">start</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="n">jumps_arr</span><span class="p">[</span><span class="n">start</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span><span class="n">end</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+            <span class="n">omega</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">atom_path</span><span class="p">)</span>
+
+            <span class="n">njumps_time</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">jumps_arr</span><span class="p">)</span>
+            <span class="n">njumps_time_noreverse</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">jumps_arr</span><span class="p">)</span>
+
+            <span class="n">atoms_jumps_indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">site_change</span><span class="p">)))</span>            
+            <span class="n">atoms_jumps_reverse_indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">sites_changes_back</span><span class="p">)))</span>
+
+            <span class="n">sites_visited_atom</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">atom_paths_not_noise</span><span class="p">)))</span>
+
+        <span class="c1">#Number of simultaneous jumps according &quot;prl 116, 135901 (2016)&quot;.</span>
+        <span class="n">ns_jumps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">njumps_time</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+  
+        <span class="c1"># Calculate strings of ions according to &quot;prl 116, 135901 (2016)&quot;.</span>
+        <span class="n">sites_atoms_time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">omega</span><span class="p">)</span> 
+    
+        <span class="bp">self</span><span class="o">.</span><span class="n">total_time_updated</span> <span class="o">=</span> <span class="p">((</span><span class="n">nframes_allow</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltf</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time_frames</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">deltf</span><span class="p">)</span> 
+    
+        <span class="c1">#Matrix of jumps. Fix of last frame jump.</span>
+        <span class="n">njumps_time_noreverse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">njumps_time_noreverse</span><span class="p">)</span>
+  
+        <span class="n">traj_chunks</span> <span class="o">=</span> <span class="n">sites_atoms_time</span>
+      
+        <span class="n">traj_jumps</span> <span class="o">=</span> <span class="n">njumps_time_noreverse</span> 
+   
+        <span class="n">sites_atoms_time</span> <span class="o">=</span> <span class="n">traj_chunks</span>
+        <span class="n">jumps_atoms_time</span> <span class="o">=</span> <span class="n">traj_jumps</span>
+        <span class="n">jumps_atoms_time</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="n">forwardjumps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">jumps_atoms_time</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">string_indices_time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">forwardjumps</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1"># Find the indices of the rows for which the value is 1 in new_arr at arr_jumps_index</span>
+        <span class="n">rows_with_jumps</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">string_indices_time</span><span class="p">:</span>
+            <span class="n">rows_with_jumps</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">jumps_atoms_time</span><span class="p">)</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+        
+        <span class="n">string_lengths</span> <span class="o">=</span> <span class="p">[];</span> <span class="n">long_strings</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">col</span><span class="p">,</span> <span class="n">rows</span> <span class="ow">in</span> <span class="n">rows_with_jumps</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="c1">#print(f&quot;\nTime step {col}:&quot;)</span>
+            <span class="n">simultaneous_jumps_time</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>                 
+                <span class="n">element_col</span> <span class="o">=</span> <span class="n">sites_atoms_time</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span>
+                <span class="n">element_col_plus_1</span> <span class="o">=</span> <span class="n">sites_atoms_time</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">element_col</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">element_col_plus_1</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                    <span class="n">left_value</span> <span class="o">=</span> <span class="n">find_nearest_non_negative_left</span><span class="p">(</span><span class="n">sites_atoms_time</span><span class="p">[</span><span class="n">row</span><span class="p">],</span> <span class="n">col</span><span class="p">)</span>
+                    <span class="n">right_value</span> <span class="o">=</span> <span class="n">find_nearest_non_negative_right</span><span class="p">(</span><span class="n">sites_atoms_time</span><span class="p">[</span><span class="n">row</span><span class="p">],</span> <span class="n">col</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+                    <span class="n">jump_sites</span> <span class="o">=</span> <span class="p">[</span><span class="n">left_value</span><span class="p">,</span> <span class="n">right_value</span><span class="p">]</span>                    
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">jump_sites</span> <span class="o">=</span> <span class="p">[</span><span class="n">element_col</span><span class="p">,</span> <span class="n">element_col_plus_1</span><span class="p">]</span>
+                
+                <span class="n">simultaneous_jumps_time</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">jump_sites</span><span class="p">)</span>
+                            
+            <span class="n">graph</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">set</span><span class="p">)</span>
+            <span class="c1">#Build the graph</span>
+            <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">simultaneous_jumps_time</span><span class="p">:</span>
+                <span class="n">graph</span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+                <span class="n">graph</span><span class="p">[</span><span class="n">b</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>                   
+
+            <span class="n">connected_jumps</span> <span class="o">=</span> <span class="n">find_connected_jumps</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">simultaneous_jumps_time</span><span class="p">)</span>
+            
+            <span class="n">cluster_sizes</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">cluster</span><span class="p">)</span> <span class="k">for</span> <span class="n">cluster</span> <span class="ow">in</span> <span class="n">connected_jumps</span><span class="p">]</span>
+            
+            <span class="n">cluster_size_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">cluster_sizes</span><span class="p">)</span>
+        
+            <span class="n">string_lengths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cluster_size_counts</span><span class="p">)</span>
+
+        <span class="n">strings_per_length</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">Counter</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span> <span class="k">for</span> <span class="n">counter</span> <span class="ow">in</span> <span class="n">string_lengths</span><span class="p">),</span> <span class="n">Counter</span><span class="p">())</span>
+
+        <span class="n">prob_string</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="p">((</span><span class="n">value</span><span class="p">)</span><span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">total_time_updated</span><span class="p">))</span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">strings_per_length</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+    
+        <span class="k">return</span>  <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">atoms_jumps_indices</span><span class="p">),</span>\
+                <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">atoms_jumps_reverse_indices</span><span class="p">),</span> <span class="n">ns_jumps</span><span class="p">,</span>\
+                <span class="n">prob_string</span><span class="p">,</span> <span class="n">sites_visited_atom</span>
+ 
+    <span class="k">def</span> <span class="nf">_write_string_freq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prob_string</span><span class="p">,</span> <span class="n">output_filename</span><span class="p">):</span>
+        
+        <span class="n">sorted_items</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">prob_string</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>     
+        
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;# String Length (#n)  f_n(ps^-1)</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">sorted_items</span><span class="p">:</span>
+                <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">:</span><span class="s2">10.4f</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">value</span><span class="si">:</span><span class="s2">10.4f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">_write_jumps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Njumps</span><span class="p">,</span> <span class="n">RNjumps</span><span class="p">,</span> <span class="n">SNjumps</span><span class="p">,</span> <span class="n">output_jumpsinfo_filename</span><span class="p">,</span> <span class="n">output_stringjumps_filename</span><span class="p">):</span> 
+        <span class="n">self_corr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">RNjumps</span><span class="p">,</span> <span class="n">Njumps</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="n">Njumps</span><span class="o">!=</span><span class="mi">0</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">RNjumps</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">))</span>
+        <span class="n">self_corr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">self_corr</span><span class="p">,</span> <span class="n">nan</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>  
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_jumpsinfo_filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;# Atom      NJumps     RNJumps    JumpCoefficient</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Njumps</span><span class="p">)):</span>
+                <span class="n">formatted_row</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:^12}{:^12}{:^12}{:^12.4f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">i</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">Njumps</span><span class="p">[</span><span class="n">row</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">RNjumps</span><span class="p">[</span><span class="n">row</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">self_corr</span><span class="p">[</span><span class="n">row</span><span class="p">])</span>
+                <span class="p">)</span>
+                <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">formatted_row</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_stringjumps_filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;# Frame     NSjumps </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">SNjumps</span><span class="p">)):</span>
+                <span class="n">formatted_row</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:^12}{:^12}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">i</span><span class="p">,</span> <span class="n">SNjumps</span><span class="p">[</span><span class="n">row</span><span class="p">]</span>
+                <span class="p">)</span>
+                <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">formatted_row</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+               
+    <span class="k">def</span> <span class="nf">_plot_cluster_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitud_values</span><span class="p">,</span> <span class="n">output_filename</span><span class="p">):</span>
+        
+        <span class="n">amplitud_indices</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">amplitud_values</span><span class="p">))</span>
+        
+        <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">8.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">))</span>        
+        <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">amplitud_indices</span><span class="p">,</span> <span class="n">amplitud_values</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels_shapes</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;rainbow&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">40</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Site Index&#39;</span><span class="p">,</span> <span class="n">fontproperties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">font_properties</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Site amplitude (A)&#39;</span><span class="p">,</span> <span class="n">fontproperties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">font_properties</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">labelrotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>        
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">output_filename</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">_plot_cluster_shapes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variances</span><span class="p">,</span> <span class="n">output_filename</span><span class="p">):</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Site shapes variance&#39;</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">))</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>   
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">variances</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span>
+                   <span class="n">variances</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span>
+                   <span class="n">variances</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">],</span>
+                   <span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels_shapes</span><span class="p">,</span>
+                   <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;rainbow&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+            
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="n">fontproperties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">font_properties</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">fontproperties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">font_properties</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">fontproperties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">font_properties</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">fontproperties</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">font_properties</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;major&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+
+        <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>        
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">output_filename</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_plot_sites_visited</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sites_visited</span><span class="p">):</span>
+        <span class="c1">#Ploting number of sites visited per atom</span>
+        <span class="n">num_bins</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sites_visited</span><span class="p">)))</span>
+        <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">8.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">))</span>   
+
+        <span class="n">sites_visited_corr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">sites_visited</span><span class="p">)</span> 
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sites_visited_corr</span><span class="p">,</span>
+                <span class="n">bins</span> <span class="o">=</span> <span class="n">num_bins</span><span class="p">,</span>
+                <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Number of sites visited&#39;</span><span class="p">,</span> <span class="n">fontproperties</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">font_properties</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span> 
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Atoms&#39;</span><span class="p">,</span><span class="n">fontproperties</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">font_properties</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+
+        <span class="c1"># Ensure y-axis has integer values only</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="n">integer</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span> 
+        <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="n">integer</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>        
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">labelrotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>        
+        <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;sites_visited.png&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">_process_extra_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">density_maps</span><span class="p">,</span> <span class="n">sites_outputs</span><span class="p">,</span> <span class="n">voxels_visited</span><span class="p">,</span> <span class="n">jumpsinfos</span><span class="p">,</span>
+                            <span class="n">simultaneousjumps</span><span class="p">,</span> <span class="n">stringfreq</span><span class="p">):</span>     
+        <span class="k">for</span> <span class="n">density_map</span><span class="p">,</span> <span class="n">sites_output</span><span class="p">,</span> <span class="n">voxel_path</span><span class="p">,</span> <span class="n">jumpsinfo</span><span class="p">,</span> <span class="n">simultaneousjump</span><span class="p">,</span> <span class="n">stringfreq</span> <span class="ow">in</span>\
+              <span class="nb">zip</span><span class="p">(</span><span class="n">density_maps</span><span class="p">,</span> <span class="n">sites_outputs</span><span class="p">,</span> <span class="n">voxels_visited</span><span class="p">,</span> <span class="n">jumpsinfos</span><span class="p">,</span> <span class="n">simultaneousjumps</span><span class="p">,</span> <span class="n">stringfreq</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Reading file:&#39;</span><span class="p">,</span> <span class="n">density_map</span><span class="p">)</span>
+            <span class="n">density_values</span><span class="p">,</span> <span class="n">_</span> <span class="p">,</span> <span class="n">index_voxels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_density_map</span><span class="p">(</span><span class="n">density_map</span><span class="p">)</span>
+            
+            <span class="c1"># Copying labels and indices from the complete density map                    </span>
+            <span class="n">mask_indices_ref</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">voxel_indices</span><span class="p">,</span> <span class="n">index_voxels</span><span class="p">)</span>
+            <span class="n">mask_indices_tar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">index_voxels</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">voxel_indices</span><span class="p">)</span>
+
+            <span class="n">voxel_indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">voxel_indices</span><span class="p">[</span><span class="n">mask_indices_ref</span><span class="p">]</span>
+            <span class="n">cut_labels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cut_labels</span><span class="p">[</span><span class="n">mask_indices_ref</span><span class="p">]</span>  
+            <span class="n">cluster_labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">cut_labels</span><span class="p">)</span>
+
+            <span class="n">label_shape</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels_shapes</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">site_labels</span><span class="p">,</span> <span class="n">cluster_labels</span><span class="p">)]</span>
+            <span class="n">rho_site</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rho_sites</span><span class="p">(</span><span class="n">density_values</span><span class="p">[</span><span class="n">mask_indices_tar</span><span class="p">],</span> <span class="n">cut_labels</span><span class="p">)</span>
+            <span class="n">center_sites</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">center_sites</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">site_labels</span><span class="p">,</span> <span class="n">cut_labels</span><span class="p">)]</span>
+            <span class="n">amplitud_sites</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">amplitud_sites</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">site_labels</span><span class="p">,</span> <span class="n">cut_labels</span><span class="p">)]</span>
+
+            <span class="n">_</span> <span class="p">,</span> <span class="n">nn_neighbors</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_number_neighbors</span><span class="p">(</span><span class="n">center_sites</span><span class="p">,</span> <span class="n">label_shape</span><span class="p">)</span>
+           
+
+            <span class="n">info</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">([</span>
+                <span class="n">center_sites</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">center_sites</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">center_sites</span><span class="p">[:,</span><span class="mi">2</span><span class="p">],</span>              
+                <span class="n">label_shape</span><span class="p">,</span> 
+                <span class="n">nn_neighbors</span><span class="p">,</span>              
+                <span class="n">rho_site</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">voxel_vol</span><span class="p">,</span> 
+                <span class="n">amplitud_sites</span>
+            <span class="p">])</span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Writing file:&#39;</span><span class="p">,</span> <span class="n">sites_output</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_write_outputs</span><span class="p">(</span><span class="n">sites_output</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span>
+
+            <span class="c1"># Analyzing and printing information per site type            </span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Information for site type&#39;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">site_type</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">info</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]):</span>
+                <span class="n">site_specific_info</span> <span class="o">=</span> <span class="n">info</span><span class="p">[</span><span class="n">info</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="n">site_type</span><span class="p">]</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Label site: </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">site_type</span><span class="p">)</span><span class="si">}</span><span class="s1">, Number of Sites: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">site_specific_info</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+            <span class="c1"># Jump imformation for cluster</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Reading file: </span><span class="si">{</span><span class="n">voxel_path</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">voxel_indices_time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_voxel_index</span><span class="p">(</span><span class="n">voxel_path</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total time: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">time_frames</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">voxel_indices_time</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Time step VoxelIndices: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">time_frames</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+            <span class="n">total_time</span> <span class="o">=</span> <span class="p">(</span><span class="n">voxel_indices_time</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time_frames</span><span class="p">)</span>
+            <span class="n">total_jupms</span><span class="p">,</span> <span class="n">reverse_jumps</span><span class="p">,</span> <span class="n">simultaneous_jumps</span><span class="p">,</span> <span class="n">average_probabilities</span><span class="p">,</span> <span class="n">_</span><span class="o">=</span>\
+                  <span class="bp">self</span><span class="o">.</span><span class="n">_atom_jumps</span><span class="p">(</span><span class="n">voxel_indices_time</span><span class="p">,</span> <span class="n">cut_labels</span><span class="p">,</span> <span class="n">voxel_indices</span><span class="p">,</span>\
+                                   <span class="n">voxel_indices_time</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">total_time</span><span class="p">)</span>            
+            
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Writing file: </span><span class="si">{</span><span class="n">jumpsinfo</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Writing file: </span><span class="si">{</span><span class="n">simultaneousjump</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Frames interval: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">deltf</span><span class="si">:</span><span class="s1">d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Time interval between frame intervals: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">time_frames</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">deltf</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Updated total time: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">total_time_updated</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">_write_jumps</span><span class="p">(</span><span class="n">total_jupms</span><span class="p">,</span> <span class="n">reverse_jumps</span><span class="p">,</span> <span class="n">simultaneous_jumps</span><span class="p">,</span>\
+                               <span class="n">jumpsinfo</span><span class="p">,</span> <span class="n">simultaneousjump</span><span class="p">)</span>
+
+
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Writing file: </span><span class="si">{</span><span class="n">stringfreq</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>                  
+            <span class="bp">self</span><span class="o">.</span><span class="n">_write_string_freq</span><span class="p">(</span><span class="n">average_probabilities</span><span class="p">,</span> <span class="n">stringfreq</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_site_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">voxels_visited_file</span> <span class="o">=</span> <span class="s1">&#39;VoxelIndices.dat&#39;</span>            
+            <span class="bp">self</span><span class="o">.</span><span class="n">voxel_indices_time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_voxel_index</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">voxels_visited_file</span><span class="p">)</span>           
+            <span class="bp">self</span><span class="o">.</span><span class="n">n_atoms</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">voxel_indices_time</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">n_frames</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">voxel_indices_time</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+          
+            <span class="bp">self</span><span class="o">.</span><span class="n">_find_density_cutoff</span><span class="p">()</span>
+            <span class="c1"># Calculate the center of each cluster and the amplitud         </span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">center_sites</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">site_labels</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">amplitud_sites</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_center_sites</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">voxel_coor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cut_labels</span><span class="p">)</span>
+            
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Amplitude types: </span><span class="si">{:d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels_shapes</span><span class="p">))))</span>
+
+            <span class="n">am_values</span> <span class="o">=</span> <span class="p">[]</span>
+
+            <span class="k">for</span> <span class="n">am</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels_shapes</span><span class="p">))):</span>
+                <span class="n">mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels_shapes</span> <span class="o">==</span> <span class="n">am</span>
+                <span class="n">am_avg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">amplitud_sites</span><span class="p">[</span><span class="n">mask</span><span class="p">])</span>               
+                <span class="n">am_value</span> <span class="o">=</span> <span class="n">am_avg</span> 
+                <span class="n">am_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">am_value</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Site amplitudes type </span><span class="si">{</span><span class="n">am</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">am_value</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_nneighbors</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nn_neighbors</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_number_neighbors</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">center_sites</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels_shapes</span><span class="p">)</span>
+            
+            <span class="k">for</span> <span class="n">cut_nn</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">labels_shapes</span><span class="p">))):</span>
+                <span class="n">cutoff_nn_value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cutoff_nneighbors</span><span class="p">[</span><span class="n">cut_nn</span><span class="p">]</span>             
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Distance used as cutoff in NN type </span><span class="si">{</span><span class="n">cut_nn</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">cutoff_nn_value</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">rho_site</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rho_sites</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rho_values</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cut_labels</span><span class="p">)</span>
+            
+            <span class="c1"># Preparing data</span>
+            <span class="n">info</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">([</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">center_sites</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">center_sites</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">center_sites</span><span class="p">[:,</span><span class="mi">2</span><span class="p">],</span>              
+                <span class="bp">self</span><span class="o">.</span><span class="n">labels_shapes</span><span class="p">,</span> 
+                <span class="bp">self</span><span class="o">.</span><span class="n">nn_neighbors</span><span class="p">,</span>              
+                <span class="bp">self</span><span class="o">.</span><span class="n">rho_site</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">voxel_vol</span><span class="p">,</span> 
+                <span class="bp">self</span><span class="o">.</span><span class="n">amplitud_sites</span><span class="p">,</span>             
+            <span class="p">])</span>
+                
+            <span class="c1"># Writing information file</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&gt;&gt; Sites map of the structure &lt;&lt;&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Writing file: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">out_file</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_write_outputs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">out_file</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span>
+
+            <span class="c1"># Analyzing and printing information per site type          </span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Information for site type&#39;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">site_type</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">info</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]):</span>
+                <span class="n">site_specific_info</span> <span class="o">=</span> <span class="n">info</span><span class="p">[</span><span class="n">info</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="n">site_type</span><span class="p">]</span>              
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Label site: </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">site_type</span><span class="p">)</span><span class="si">}</span><span class="s1">, Number of Sites: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">site_specific_info</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            
+            <span class="bp">self</span><span class="o">.</span><span class="n">_plot_cluster_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">amplitud_sites</span><span class="p">,</span> <span class="s1">&#39;site_amplitudes.png&#39;</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">total_jupms</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">reverse_jumps</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">simultaneous_jumps</span><span class="p">,</span>\
+                  <span class="bp">self</span><span class="o">.</span><span class="n">average_probabilities</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sites_visited_atom</span> <span class="o">=</span>\
+                  <span class="bp">self</span><span class="o">.</span><span class="n">_atom_jumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">voxel_indices_time</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cut_labels</span><span class="p">,</span>\
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">voxel_indices</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_frames</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_plot_sites_visited</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sites_visited_atom</span><span class="p">)</span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Reading file: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">voxels_visited_file</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&gt;&gt; Trajectory data &lt;&lt;&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total time: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">total_time</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>            
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Time step VoxelIndices: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">time_frames</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+                       
+            <span class="c1">############   </span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">jumps_file</span> <span class="o">=</span> <span class="s1">&#39;jumps_info.dat&#39;</span>            
+            <span class="bp">self</span><span class="o">.</span><span class="n">simultaneous_jumps_file</span> <span class="o">=</span> <span class="s1">&#39;simultaneous_jumps.dat&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">string_freq_file</span> <span class="o">=</span> <span class="s1">&#39;string_frequency.dat&#39;</span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Writing file: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">jumps_file</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Writing file: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">simultaneous_jumps_file</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Writing file: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">string_freq_file</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> 
+            
+
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Frames interval: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">deltf</span><span class="si">:</span><span class="s1">d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Time interval between frame intervals: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">time_frames</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="bp">self</span><span class="o">.</span><span class="n">deltf</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>            
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Updated total time: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">total_time_updated</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_write_jumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">total_jupms</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">reverse_jumps</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">simultaneous_jumps</span><span class="p">,</span>\
+                               <span class="bp">self</span><span class="o">.</span><span class="n">jumps_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">simultaneous_jumps_file</span><span class="p">)</span>
+                   
+            <span class="bp">self</span><span class="o">.</span><span class="n">_write_string_freq</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">average_probabilities</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">string_freq_file</span><span class="p">)</span>
+          
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">clustering</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">doped</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&gt;&gt; Sites map of &lt;di&gt; clusters &lt;&lt;&#39;</span><span class="p">)</span>
+
+                <span class="n">cluster_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;H-&#39;</span><span class="p">,</span> <span class="s1">&#39;M-&#39;</span><span class="p">,</span> <span class="s1">&#39;L-&#39;</span><span class="p">,</span> <span class="s1">&#39;HM-&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbosity</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="p">[</span><span class="s1">&#39;HM-&#39;</span><span class="p">,</span> <span class="s1">&#39;L-&#39;</span><span class="p">]</span>
+                <span class="n">density_maps_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">density_map_targ</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>           
+                <span class="n">sites_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">out_file</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>
+                <span class="n">voxels_visited_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">voxels_visited_file</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>
+                <span class="n">jumpsinfo_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">jumps_file</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>
+                <span class="n">simultaneousjumps_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">simultaneous_jumps_file</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>
+                <span class="n">stringfreq_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">string_freq_file</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">_process_extra_data</span><span class="p">(</span><span class="n">density_maps_outputs</span><span class="p">,</span> <span class="n">sites_outputs</span><span class="p">,</span> <span class="n">voxels_visited_outputs</span><span class="p">,</span>
+                                          <span class="n">jumpsinfo_outputs</span><span class="p">,</span> <span class="n">simultaneousjumps_outputs</span><span class="p">,</span> <span class="n">stringfreq_outputs</span><span class="p">)</span>
+
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">clustering</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">doped</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&gt;&gt; Sites map of the doped structure &lt;&lt;&#39;</span><span class="p">)</span>
+                
+                <span class="n">cluster_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Dope-&#39;</span><span class="p">]</span>
+                <span class="n">density_maps_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">density_map_targ</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>           
+                <span class="n">sites_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">out_file</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>
+                <span class="n">voxels_visited_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">voxels_visited_file</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>
+                <span class="n">jumpsinfo_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">jumps_file</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>
+                <span class="n">simultaneousjumps_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">simultaneous_jumps_file</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>
+                <span class="n">stringfreq_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">string_freq_file</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">_process_extra_data</span><span class="p">(</span><span class="n">density_maps_outputs</span><span class="p">,</span> <span class="n">sites_outputs</span><span class="p">,</span> <span class="n">voxels_visited_outputs</span><span class="p">,</span>
+                                          <span class="n">jumpsinfo_outputs</span><span class="p">,</span> <span class="n">simultaneousjumps_outputs</span><span class="p">,</span> <span class="n">stringfreq_outputs</span><span class="p">)</span>
+                
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">clustering</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">doped</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&gt;&gt; Sites map of the doped structure and its &lt;di&gt; clusters &lt;&lt;&#39;</span><span class="p">)</span>
+                
+                <span class="n">cluster_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Dope-&#39;</span><span class="p">,</span><span class="s1">&#39;H-Dope-&#39;</span><span class="p">,</span> <span class="s1">&#39;M-Dope-&#39;</span><span class="p">,</span> <span class="s1">&#39;L-Dope-&#39;</span><span class="p">,</span> <span class="s1">&#39;HM-Dope-&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbosity</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="p">[</span><span class="s1">&#39;Dope-&#39;</span><span class="p">,</span><span class="s1">&#39;HM-Dope-&#39;</span><span class="p">,</span> <span class="s1">&#39;L-Dope-&#39;</span><span class="p">]</span>
+                <span class="n">density_maps_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">density_map_targ</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>           
+                <span class="n">sites_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">out_file</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>
+                <span class="n">voxels_visited_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">voxels_visited_file</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>
+                <span class="n">jumpsinfo_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">jumps_file</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>
+                <span class="n">simultaneousjumps_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">simultaneous_jumps_file</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>
+                <span class="n">stringfreq_outputs</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">suffix</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">string_freq_file</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">suffix</span> <span class="ow">in</span> <span class="n">cluster_labels</span><span class="p">]</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">_process_extra_data</span><span class="p">(</span><span class="n">density_maps_outputs</span><span class="p">,</span> <span class="n">sites_outputs</span><span class="p">,</span> <span class="n">voxels_visited_outputs</span><span class="p">,</span>
+                                          <span class="n">jumpsinfo_outputs</span><span class="p">,</span> <span class="n">simultaneousjumps_outputs</span><span class="p">,</span> <span class="n">stringfreq_outputs</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span></div>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Henry Andres Cortés
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Henry Andres Cortés.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
