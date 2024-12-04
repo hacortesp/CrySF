@@ -9,9 +9,8 @@ hiphive
 click
 CrySF
 
-Python 
 MDanalysis
 scikit-learn 
-Matplotlib 
-SciPy
-Seabron
+matplotlib 
+scipy
+seaborn
