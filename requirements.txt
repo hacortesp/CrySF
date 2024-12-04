@@ -1,6 +1,0 @@
-Python 
-MDanalysis
-scikit-learn 
-Matplotlib 
-SciPy
-Seabron
