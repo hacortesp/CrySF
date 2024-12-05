@@ -67,9 +67,8 @@ CrySF is being developed by:
 Contact
 -----------------------------------
 
-If you have questions, please don't hesitate to reach out at: hacortes@bcamath.org
-- GitLab: `CrySF GitLab Repository <https://gitlab.bcamath.org/hacortes/crysf>`_
-- Github: `CrySF Github Repository <https://https://github.com/hacortesp/CrySF>`_
+If you have questions, please don't hesitate to reach out at: hacortes@bcamath.org GitLab: `CrySF GitLab Repository <https://gitlab.bcamath.org/hacortes/crysf>`_ and Github: `CrySF Github Repository <https://github.com/hacortesp/CrySF>`_
+
 .. toctree::
    :hidden:
    :caption: Usage
