@@ -601,24 +601,23 @@ class CrySF:
         plt.close()
 
     def _plot_sites_visited(self, sites_visited):
-        #Ploting number of sites visited per atom
-        num_bins = int(np.sqrt(len(sites_visited)))
-        fig, ax = plt.subplots(figsize=(8.0, 8.0))   
+        #Count occurrences of each unique value
+        unique_values, counts = np.unique(sites_visited, return_counts=True)
+        fig, ax = plt.subplots(figsize=(8.0, 8.0))
 
-        sites_visited_corr = np.array(sites_visited) 
+        # Plot histogram as bars for each unique value
+        ax.bar(unique_values, counts, color='b', alpha=0.7, edgecolor='k', width=0.8)
 
-        ax.hist(sites_visited_corr,
-                bins = num_bins,
-                color = 'b', alpha=0.7, edgecolor='k')
-        ax.set_xlabel('Number of sites visited', fontproperties = self.font_properties, fontsize=30) 
+        ax.set_xlabel('Number of sites visited', fontsize=30)
         ax.set_ylabel('Number of Atoms',fontproperties = self.font_properties, fontsize=30)
-
+        # Set x-axis limits to (min-1) and (max+1) of the data
+        ax.set_xlim([min(unique_values) - 1, max(unique_values) + 1])
         # Ensure y-axis has integer values only
-        ax.xaxis.set_major_locator(MaxNLocator(integer=True)) 
-        ax.yaxis.set_major_locator(MaxNLocator(integer=True))        
+        ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+        ax.yaxis.set_major_locator(MaxNLocator(integer=True))
 
         ax.tick_params(axis='both', labelsize=20, labelrotation=0)
-        fig.tight_layout()        
+        fig.tight_layout()
         plt.savefig('sites_visited.png')
         plt.close()
         
