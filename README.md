@@ -15,7 +15,7 @@ The software operates through two distinct commands. The first command, DensityM
 - scikit-learn https://scikit-learn.org/stable/
 - Matplotlib https://matplotlib.org/
 - SciPy https://scipy.org/
-- Seabron https://seaborn.pydata.org/ 
+- Seaborn https://seaborn.pydata.org/ 
 
 ## Installation
 
