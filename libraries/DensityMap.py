@@ -422,8 +422,15 @@ class DensityMap:
                 if isinstance(self.atom_name, str) and self.atom_name.isalpha(): #self.atom_name.isalpha():
                     atom_type = 'name'
                 else:
-                    atom_type = 'type'            
-                u_traj = mda.Universe(self.topo_file, self.traj_file, format=f'{self.format}')
+                    atom_type = 'type' 
+                
+                try:
+                    u_traj = mda.Universe(self.topo_file, self.traj_file, format=f'{self.format}')
+                except Exception:
+                    # Retry with atom_style if it fails
+                    u_traj = mda.Universe(self.topo_file, self.traj_file, format=f'{self.format}', atom_style='id type x y z')
+                    
+                #u_traj = mda.Universe(self.topo_file, self.traj_file, format=f'{self.format}')
                 atom_id = u_traj.select_atoms(f'{atom_type} {self.atom_name}').indices                
                 total_atoms = len(atom_id)
             elif self.format == 'LAMMPSDUMP':
