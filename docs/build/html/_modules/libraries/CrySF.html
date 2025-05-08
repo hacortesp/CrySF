@@ -1,9 +1,8 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
@@ -14,45 +13,46 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
-  
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=f9c1cefe"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/libraries/CrySF';</script>
-    <link rel="shortcut icon" href="../../_static/Icon.png"/>
+    <link rel="icon" href="../../_static/Icon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -60,32 +60,16 @@
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -93,7 +77,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -101,16 +84,27 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -125,6 +119,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../../index.html">
   
@@ -138,11 +134,18 @@
     
     
     <img src="../../_static/Icon.png" class="logo__image only-light" alt="CrySF 1.0.0 documentation - Home"/>
-    <script>document.write(`<img src="../../_static/Icon.png" class="logo__image only-dark" alt="CrySF 1.0.0 documentation - Home"/>`);</script>
+    <img src="../../_static/Icon.png" class="logo__image only-dark pst-js-only" alt="CrySF 1.0.0 documentation - Home"/>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Usage</span></p>
 <ul class="nav bd-sidenav">
@@ -164,7 +167,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -173,14 +176,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -208,24 +211,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 
 </div></div>
       
@@ -249,33 +244,35 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <h1>Source code for libraries.CrySF</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">sys</span>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 
-<span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">cKDTree</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.spatial</span><span class="w"> </span><span class="kn">import</span> <span class="n">cKDTree</span>
 
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span><span class="p">,</span> <span class="n">Counter</span><span class="p">,</span><span class="n">defaultdict</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">deque</span><span class="p">,</span> <span class="n">Counter</span><span class="p">,</span><span class="n">defaultdict</span>
 
-<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
-<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
-<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">NearestNeighbors</span> 
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">silhouette_score</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span><span class="p">,</span> <span class="n">MinMaxScaler</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.decomposition</span><span class="w"> </span><span class="kn">import</span> <span class="n">PCA</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.cluster</span><span class="w"> </span><span class="kn">import</span> <span class="n">KMeans</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">NearestNeighbors</span> 
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">silhouette_score</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span><span class="p">,</span> <span class="n">MinMaxScaler</span>
 
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">matplotlib.font_manager</span> <span class="kn">import</span> <span class="n">FontProperties</span>
-<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">MaxNLocator</span>
-<span class="kn">import</span> <span class="nn">seaborn</span>           <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.font_manager</span><span class="w"> </span><span class="kn">import</span> <span class="n">FontProperties</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.ticker</span><span class="w"> </span><span class="kn">import</span> <span class="n">MaxNLocator</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w">           </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
 
 <span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">()</span>
 
 <span class="n">kmeans_kwargs</span>   <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="s1">&#39;random&#39;</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-04</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
-<div class="viewcode-block" id="CrySF"><a class="viewcode-back" href="../../source/CrySF.html#libraries.CrySF.CrySF">[docs]</a><span class="k">class</span> <span class="nc">CrySF</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timestep</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">minv</span> <span class="o">=</span> <span class="mf">0.28</span><span class="p">,</span> <span class="n">maxv</span> <span class="o">=</span> <span class="mf">3.05</span><span class="p">,</span> 
+<div class="viewcode-block" id="CrySF">
+<a class="viewcode-back" href="../../source/CrySF.html#libraries.CrySF.CrySF">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CrySF</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timestep</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">minv</span> <span class="o">=</span> <span class="mf">0.28</span><span class="p">,</span> <span class="n">maxv</span> <span class="o">=</span> <span class="mf">3.05</span><span class="p">,</span> 
                  <span class="n">verbosity</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">deltframes</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">scaler</span> <span class="o">=</span> <span class="s1">&#39;MinMaxScaler&#39;</span><span class="p">,</span>
                  <span class="n">clustering</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="n">doped</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
      
@@ -293,7 +290,7 @@ document.write(`
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_site_analysis</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">_read_density_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_density</span><span class="p">):</span>        
+    <span class="k">def</span><span class="w"> </span><span class="nf">_read_density_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_density</span><span class="p">):</span>        
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_density</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>            
             <span class="n">first_line</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
             <span class="n">dl</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">first_line</span><span class="p">[</span><span class="mi">6</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">first_line</span><span class="p">[</span><span class="mi">7</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">first_line</span><span class="p">[</span><span class="mi">8</span><span class="p">])]</span>
@@ -311,7 +308,7 @@ document.write(`
 
         <span class="k">return</span> <span class="n">density_values</span><span class="p">,</span> <span class="n">xyz_map</span><span class="p">,</span> <span class="n">index_voxels</span>
     
-    <span class="k">def</span> <span class="nf">_clustering_pbc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_clustering_pbc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
         <span class="n">min_samples</span> <span class="o">=</span> <span class="mi">12</span> <span class="c1">#the number of NN voxels </span>
         <span class="n">X_mod</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mod</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pbc</span><span class="p">)</span>
         <span class="n">tree</span> <span class="o">=</span> <span class="n">cKDTree</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">X_mod</span><span class="p">,</span> <span class="n">boxsize</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pbc</span><span class="p">)</span>
@@ -338,7 +335,7 @@ document.write(`
                 <span class="n">cluster_id</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">return</span> <span class="n">labels</span>
     
-    <span class="k">def</span> <span class="nf">_sites_cova_pca</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">voxel_coor</span><span class="p">,</span> <span class="n">labels_cut</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_sites_cova_pca</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">voxel_coor</span><span class="p">,</span> <span class="n">labels_cut</span><span class="p">):</span>
         <span class="n">max_label</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">labels_cut</span><span class="p">)</span>
         <span class="n">cluster_spatial_cova</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -368,7 +365,7 @@ document.write(`
       
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cluster_spatial_cova</span><span class="p">)</span>
  
-    <span class="k">def</span> <span class="nf">_write_cluster_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">out_file</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_write_cluster_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">out_file</span><span class="p">):</span>
         <span class="c1">#out_file = &#39;SitesMap_OVITO.dat&#39;</span>
         <span class="n">total_atoms</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">coordinates</span><span class="p">)</span>
         <span class="n">atom_types</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">labels</span><span class="p">))</span>
@@ -394,7 +391,7 @@ document.write(`
                 <span class="n">scaled_coord</span> <span class="o">=</span> <span class="n">coord</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">dl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>              
                 <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">atom_line_template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="n">scaled_coord</span><span class="p">))</span>
 
-    <span class="k">def</span> <span class="nf">_find_density_cutoff</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_find_density_cutoff</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">density_values</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">xyz_map</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">index_voxels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_density_map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">density_map_targ</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&gt;&gt; Finding the density cutoff for clustering &lt;&lt;&#39;</span><span class="p">)</span>
         <span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">density_values</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>        
@@ -503,7 +500,7 @@ document.write(`
         <span class="k">if</span> <span class="n">cut</span> <span class="o">&gt;=</span> <span class="n">value_s</span> <span class="ow">and</span><span class="p">(</span><span class="n">wrong_sites</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_elements</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">!!Density cutoff not found!!</span><span class="se">\n</span><span class="s1"> Adjust voxel size or review trajectory</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_center_sites</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">voxel_coor</span><span class="p">,</span> <span class="n">labels_cut</span><span class="p">):</span>     
+    <span class="k">def</span><span class="w"> </span><span class="nf">_center_sites</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">voxel_coor</span><span class="p">,</span> <span class="n">labels_cut</span><span class="p">):</span>     
         <span class="n">max_label</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">labels_cut</span><span class="p">)</span>
         <span class="n">centers</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">cluster_labels</span> <span class="o">=</span> <span class="p">[]</span>
@@ -528,14 +525,14 @@ document.write(`
     
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">centers</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cluster_labels</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">max_distances</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_rho_sites</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">m_rho</span><span class="p">,</span> <span class="n">label_clust</span><span class="p">):</span>      
+    <span class="k">def</span><span class="w"> </span><span class="nf">_rho_sites</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">m_rho</span><span class="p">,</span> <span class="n">label_clust</span><span class="p">):</span>      
         <span class="n">total_rho_cluster</span> <span class="o">=</span> <span class="p">[</span>
             <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">m_rho</span><span class="p">[</span><span class="n">label_clust</span> <span class="o">==</span> <span class="n">i</span><span class="p">])</span>
             <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">label_clust</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">total_rho_cluster</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_number_neighbors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">centers_coor</span><span class="p">,</span> <span class="n">labels_type</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_number_neighbors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">centers_coor</span><span class="p">,</span> <span class="n">labels_type</span><span class="p">):</span>
         
         <span class="n">box_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pbc</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">dl</span>
         <span class="n">centers_coor</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mod</span><span class="p">(</span><span class="n">centers_coor</span><span class="p">,</span> <span class="n">box_size</span><span class="p">)</span>
@@ -555,7 +552,7 @@ document.write(`
       
         <span class="k">return</span> <span class="n">cutoff_nn</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">nn_neighbors</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_write_outputs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">out_file</span><span class="p">,</span> <span class="n">info</span><span class="p">):</span>        
+    <span class="k">def</span><span class="w"> </span><span class="nf">_write_outputs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">out_file</span><span class="p">,</span> <span class="n">info</span><span class="p">):</span>        
         <span class="n">header</span> <span class="o">=</span> <span class="s1">&#39;#Site-label   Center(X)   Center(Y)   Center(Z)  Site-Type   N-Neighbors   Occupancy  Site-Amplitud&#39;</span>
 
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">out_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
@@ -569,7 +566,7 @@ document.write(`
                 <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">formatted_row</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
                 <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 
-    <span class="k">def</span> <span class="nf">_read_voxel_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">voxels_visited_file</span><span class="p">):</span>        
+    <span class="k">def</span><span class="w"> </span><span class="nf">_read_voxel_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">voxels_visited_file</span><span class="p">):</span>        
         <span class="n">voxel_indices</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">voxels_visited_file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
@@ -580,34 +577,37 @@ document.write(`
 
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">voxel_indices</span><span class="p">)</span>
     
-    <span class="k">def</span> <span class="nf">_atom_jumps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">voxel_indices_time</span><span class="p">,</span> <span class="n">cut_labels</span><span class="p">,</span> <span class="n">voxel_indices</span><span class="p">,</span>\
+    <span class="k">def</span><span class="w"> </span><span class="nf">_atom_jumps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">voxel_indices_time</span><span class="p">,</span> <span class="n">cut_labels</span><span class="p">,</span> <span class="n">voxel_indices</span><span class="p">,</span>\
                      <span class="n">n_frames</span><span class="p">):</span>
         
-        <span class="k">def</span> <span class="nf">interstice_remover</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
-            <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-            <span class="n">rows</span><span class="p">,</span> <span class="n">cols</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">shape</span>
-                    
-            <span class="c1"># Track last valid values used for replacement for each row</span>
-            <span class="n">last_valid_values</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">rows</span>
-            
-            <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cols</span><span class="p">):</span>
-                <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
-                    <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-                        <span class="c1"># Replace with the last valid value if it exists</span>
-                        <span class="k">if</span> <span class="n">last_valid_values</span><span class="p">[</span><span class="n">row</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-                            <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_valid_values</span><span class="p">[</span><span class="n">row</span><span class="p">]</span>
-                        <span class="k">else</span><span class="p">:</span>
-                            <span class="c1"># Search for a valid replacement in future columns</span>
-                            <span class="k">for</span> <span class="n">next_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">col</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">cols</span><span class="p">):</span>
-                                <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">next_col</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
-                                    <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">next_col</span><span class="p">]</span>
-                                    <span class="n">last_valid_values</span><span class="p">[</span><span class="n">row</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">next_col</span><span class="p">]</span>
-                                    <span class="k">break</span>
-                    <span class="k">else</span><span class="p">:</span>
-                        <span class="n">last_valid_values</span><span class="p">[</span><span class="n">row</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span>
-            <span class="k">return</span> <span class="n">arr</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">interstice_remover</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+            <span class="c1"># Number of rows and columns</span>
+            <span class="n">rows</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+            <span class="n">cols</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
-        <span class="k">def</span> <span class="nf">find_connected_jumps</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">simultaneous_jumps</span><span class="p">):</span>
+            <span class="c1"># Iterate over each row</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cols</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                        <span class="c1"># Try to replace with a suitable previous value</span>
+                        <span class="n">replaced</span> <span class="o">=</span> <span class="kc">False</span>
+
+                        <span class="c1"># Check previous values in the row</span>
+                        <span class="k">for</span> <span class="n">prev_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">col</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+                            <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">prev_col</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">!=</span> <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">prev_col</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">)):</span>
+                                <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">prev_col</span><span class="p">]</span>
+                                <span class="n">replaced</span> <span class="o">=</span> <span class="kc">True</span>
+                                <span class="k">break</span>
+
+                        <span class="c1"># If no replacement found, try next values</span>
+                        <span class="k">if</span> <span class="ow">not</span> <span class="n">replaced</span><span class="p">:</span>
+                            <span class="k">for</span> <span class="n">next_col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">col</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">cols</span><span class="p">):</span>
+                                <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">next_col</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">all</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">!=</span> <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">next_col</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">rows</span><span class="p">)):</span>
+                                    <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">next_col</span><span class="p">]</span>
+                                    <span class="k">break</span>
+            <span class="k">return</span> <span class="n">arr</span>       
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">find_connected_jumps</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">simultaneous_jumps</span><span class="p">):</span>
             <span class="n">visited</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
             <span class="n">components</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -631,7 +631,7 @@ document.write(`
 
             <span class="k">return</span> <span class="n">components</span>
 
-        <span class="k">def</span> <span class="nf">find_nearest_non_negative_left</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">find_nearest_non_negative_left</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
             <span class="n">left</span> <span class="o">=</span> <span class="n">index</span>
             <span class="k">while</span> <span class="n">left</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
@@ -639,7 +639,7 @@ document.write(`
                 <span class="n">left</span> <span class="o">-=</span> <span class="mi">1</span>
             <span class="k">return</span> <span class="kc">None</span>
 
-        <span class="k">def</span> <span class="nf">find_nearest_non_negative_right</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">find_nearest_non_negative_right</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
             <span class="n">right</span> <span class="o">=</span> <span class="n">index</span>
             <span class="k">while</span> <span class="n">right</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
                 <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">right</span><span class="p">]</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
@@ -782,7 +782,7 @@ document.write(`
                 <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">atoms_jumps_reverse_indices</span><span class="p">),</span> <span class="n">ns_jumps</span><span class="p">,</span>\
                 <span class="n">prob_string</span><span class="p">,</span> <span class="n">sites_visited_atom</span>
  
-    <span class="k">def</span> <span class="nf">_write_string_freq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prob_string</span><span class="p">,</span> <span class="n">output_filename</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_write_string_freq</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prob_string</span><span class="p">,</span> <span class="n">output_filename</span><span class="p">):</span>
         
         <span class="n">sorted_items</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">prob_string</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>     
         
@@ -791,7 +791,7 @@ document.write(`
             <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">sorted_items</span><span class="p">:</span>
                 <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">:</span><span class="s2">10.4f</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">value</span><span class="si">:</span><span class="s2">10.4f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
     
-    <span class="k">def</span> <span class="nf">_write_jumps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Njumps</span><span class="p">,</span> <span class="n">RNjumps</span><span class="p">,</span> <span class="n">SNjumps</span><span class="p">,</span> <span class="n">output_jumpsinfo_filename</span><span class="p">,</span> <span class="n">output_stringjumps_filename</span><span class="p">):</span> 
+    <span class="k">def</span><span class="w"> </span><span class="nf">_write_jumps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Njumps</span><span class="p">,</span> <span class="n">RNjumps</span><span class="p">,</span> <span class="n">SNjumps</span><span class="p">,</span> <span class="n">output_jumpsinfo_filename</span><span class="p">,</span> <span class="n">output_stringjumps_filename</span><span class="p">):</span> 
         <span class="n">self_corr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">RNjumps</span><span class="p">,</span> <span class="n">Njumps</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="n">Njumps</span><span class="o">!=</span><span class="mi">0</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">RNjumps</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">))</span>
         <span class="n">self_corr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">self_corr</span><span class="p">,</span> <span class="n">nan</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>  
 
@@ -815,7 +815,7 @@ document.write(`
                 <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">formatted_row</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
                 <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
                
-    <span class="k">def</span> <span class="nf">_plot_cluster_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitud_values</span><span class="p">,</span> <span class="n">output_filename</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_plot_cluster_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitud_values</span><span class="p">,</span> <span class="n">output_filename</span><span class="p">):</span>
         
         <span class="n">amplitud_indices</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">amplitud_values</span><span class="p">))</span>
         
@@ -829,7 +829,7 @@ document.write(`
         <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">output_filename</span><span class="p">)</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
-    <span class="k">def</span> <span class="nf">_plot_cluster_shapes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variances</span><span class="p">,</span> <span class="n">output_filename</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_plot_cluster_shapes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variances</span><span class="p">,</span> <span class="n">output_filename</span><span class="p">):</span>
         <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Site shapes variance&#39;</span>
         <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">))</span>
         <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>   
@@ -851,29 +851,28 @@ document.write(`
         <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">output_filename</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">_plot_sites_visited</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sites_visited</span><span class="p">):</span>
-        <span class="c1">#Ploting number of sites visited per atom</span>
-        <span class="n">num_bins</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sites_visited</span><span class="p">)))</span>
-        <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">8.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">))</span>   
+    <span class="k">def</span><span class="w"> </span><span class="nf">_plot_sites_visited</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sites_visited</span><span class="p">):</span>
+        <span class="c1">#Count occurrences of each unique value</span>
+        <span class="n">unique_values</span><span class="p">,</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">sites_visited</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">8.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">))</span>
 
-        <span class="n">sites_visited_corr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">sites_visited</span><span class="p">)</span> 
+        <span class="c1"># Plot histogram as bars for each unique value</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">unique_values</span><span class="p">,</span> <span class="n">counts</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
 
-        <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sites_visited_corr</span><span class="p">,</span>
-                <span class="n">bins</span> <span class="o">=</span> <span class="n">num_bins</span><span class="p">,</span>
-                <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Number of sites visited&#39;</span><span class="p">,</span> <span class="n">fontproperties</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">font_properties</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span> 
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Number of sites visited&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Atoms&#39;</span><span class="p">,</span><span class="n">fontproperties</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">font_properties</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-
+        <span class="c1"># Set x-axis limits to (min-1) and (max+1) of the data</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="nb">min</span><span class="p">(</span><span class="n">unique_values</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">unique_values</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
         <span class="c1"># Ensure y-axis has integer values only</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="n">integer</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span> 
-        <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="n">integer</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>        
+        <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="n">integer</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">MaxNLocator</span><span class="p">(</span><span class="n">integer</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
 
         <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">labelrotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-        <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>        
+        <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;sites_visited.png&#39;</span><span class="p">)</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
         
-    <span class="k">def</span> <span class="nf">_process_extra_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">density_maps</span><span class="p">,</span> <span class="n">sites_outputs</span><span class="p">,</span> <span class="n">voxels_visited</span><span class="p">,</span> <span class="n">jumpsinfos</span><span class="p">,</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_process_extra_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">density_maps</span><span class="p">,</span> <span class="n">sites_outputs</span><span class="p">,</span> <span class="n">voxels_visited</span><span class="p">,</span> <span class="n">jumpsinfos</span><span class="p">,</span>
                             <span class="n">simultaneousjumps</span><span class="p">,</span> <span class="n">stringfreq</span><span class="p">):</span>     
         <span class="k">for</span> <span class="n">density_map</span><span class="p">,</span> <span class="n">sites_output</span><span class="p">,</span> <span class="n">voxel_path</span><span class="p">,</span> <span class="n">jumpsinfo</span><span class="p">,</span> <span class="n">simultaneousjump</span><span class="p">,</span> <span class="n">stringfreq</span> <span class="ow">in</span>\
               <span class="nb">zip</span><span class="p">(</span><span class="n">density_maps</span><span class="p">,</span> <span class="n">sites_outputs</span><span class="p">,</span> <span class="n">voxels_visited</span><span class="p">,</span> <span class="n">jumpsinfos</span><span class="p">,</span> <span class="n">simultaneousjumps</span><span class="p">,</span> <span class="n">stringfreq</span><span class="p">):</span>
@@ -938,7 +937,7 @@ document.write(`
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Writing file: </span><span class="si">{</span><span class="n">stringfreq</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>                  
             <span class="bp">self</span><span class="o">.</span><span class="n">_write_string_freq</span><span class="p">(</span><span class="n">average_probabilities</span><span class="p">,</span> <span class="n">stringfreq</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_site_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_site_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">voxels_visited_file</span> <span class="o">=</span> <span class="s1">&#39;VoxelIndices.dat&#39;</span>            
             <span class="bp">self</span><span class="o">.</span><span class="n">voxel_indices_time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_voxel_index</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">voxels_visited_file</span><span class="p">)</span>           
@@ -1065,6 +1064,7 @@ document.write(`
 
         <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span></div>
+
 </pre></div>
 
                 </article>
@@ -1074,7 +1074,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
 </div>
@@ -1127,8 +1127,8 @@ By Henry Andres Cortés
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>

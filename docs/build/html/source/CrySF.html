@@ -30,9 +30,9 @@
   <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -43,10 +43,10 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../_static/documentation_options.js?v=f9c1cefe"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'source/CrySF';</script>
     <link rel="icon" href="../_static/Icon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -294,7 +294,6 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries.DensityMap.DensityMap"><code class="docutils literal notranslate"><span class="pre">DensityMap</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries.CrySF.CrySF"><code class="docutils literal notranslate"><span class="pre">CrySF</span></code></a></li>
 </ul>
 </li>
@@ -318,16 +317,10 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
 <p><cite>DensityMap</cite> module contains functionalities to creats the density maps.</p>
-<dl class="py class" id="module-libraries.DensityMap">
-<dt class="sig sig-object py" id="libraries.DensityMap.DensityMap">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">libraries.DensityMap.</span></span><span class="sig-name descname"><span class="pre">DensityMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topofile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'topo.gro'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trajfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'trajectory.xtc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'XDATCAR'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">voxelsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">atomname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Li'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trajtimestep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clustering</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/libraries/DensityMap.html#DensityMap"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#libraries.DensityMap.DensityMap" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-</dd></dl>
-
 <p><cite>CrySF</cite> module contains core functionalities of the CrySF package</p>
 <dl class="py class" id="module-libraries.CrySF">
 <dt class="sig sig-object py" id="libraries.CrySF.CrySF">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">libraries.CrySF.</span></span><span class="sig-name descname"><span class="pre">CrySF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.28</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deltframes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'MinMaxScaler'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clustering</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doped</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/libraries/CrySF.html#CrySF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#libraries.CrySF.CrySF" title="Link to this definition">#</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">libraries.CrySF.</span></span><span class="sig-name descname"><span class="pre">CrySF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.28</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbosity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deltframes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaler</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'MinMaxScaler'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clustering</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doped</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/libraries/CrySF.html#CrySF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#libraries.CrySF.CrySF" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 </dd></dl>
 
@@ -373,7 +366,6 @@
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries.DensityMap.DensityMap"><code class="docutils literal notranslate"><span class="pre">DensityMap</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries.CrySF.CrySF"><code class="docutils literal notranslate"><span class="pre">CrySF</span></code></a></li>
 </ul>
 </li>
