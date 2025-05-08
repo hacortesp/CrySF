@@ -1,5 +1,3 @@
-# <span style="font-size: 3.5em;">CrySF</span>
-
 <img src="docs/Icon.png" width="30%">
 
 `CrySF` (Crystallography Sites Finder) is a specialized Python software designed to analize molecular dynamics trajectories of crystalline solid-state ionic conductors. This tool not only identifies and characterizes the crystallographic sites occupied by diffusive atoms but also examines the transitions of these atoms between sites. Such analyses provide crucial insights for researchers studying advanced materials. 
