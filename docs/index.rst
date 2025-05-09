@@ -52,7 +52,7 @@ An *ab initio* MD (VASP)  and clasic MD (LAMMPS) simulations of the cubic phase 
 Input trajectories
 ------------------
 
-`CrySF` soports different trajectory formats: XTC, TRR, LAMMPSDUMP and XDATCAR. 
+`CrySF` supports different trajectory formats: XTC, TRR, LAMMPSDUMP and XDATCAR. 
 
 Authors
 -------
