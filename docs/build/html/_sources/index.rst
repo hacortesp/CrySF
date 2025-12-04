@@ -59,7 +59,6 @@ Reference
 
 If you use CrySF, please cite `this paper <https://www.nature.com/articles/s41524-025-01861-6#article-info>`_:
 
-```
 .. code-block:: bib
 
    @article{cortes_2025_crysf,
