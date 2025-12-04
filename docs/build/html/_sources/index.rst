@@ -60,15 +60,18 @@ Reference
 If you use CrySF, please cite `this paper <https://www.nature.com/articles/s41524-025-01861-6#article-info>`_:
 
 
-@article{cortes_2025_crysf,
-   title={Unsupervised density-based method for analyzing ion mobility in crystalline solid-state electrolytes},
-   DOI={10.1038/s41524-025-01861-6},
-   journal={npj computational materials},
-   author={Cort\'es, Henry A. and Rinc\'on Bonilla, Mauricio and Akhmatskaya, Elena},
-   volume={11},
-   year={2025},
-   pages={1–15}
-   }
+::
+
+    @article{cortes_2025_crysf,
+        title={Unsupervised density-based method for analyzing ion mobility in crystalline solid-state electrolytes},
+        DOI={10.1038/s41524-025-01861-6},
+        journal={npj computational materials},
+        author={Cort\'es, Henry A. and Rinc\'on Bonilla, Mauricio and Akhmatskaya, Elena},
+        volume={11},
+        year={2025},
+        pages={1–15}
+    }
+   
  
 Authors
 -------
