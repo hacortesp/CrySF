@@ -58,7 +58,7 @@ If you use CrySF, please cite [this paper](https://www.nature.com/articles/s4152
     DOI={10.1038/s41524-025-01861-6},
     journal={npj computational materials},
     author={Cort\'es, Henry A. and Rinc\'on Bonilla, Mauricio and Akhmatskaya, Elena},
-    volume = {11}
+    volume={11},
     year={2025},
     pages={1–15}
 }
