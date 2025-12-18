@@ -2,27 +2,20 @@ import numpy as np
 import sys
 
 from scipy.spatial import cKDTree
+from collections import deque, Counter, defaultdict
 
-from collections import deque, Counter,defaultdict
-
+from libraries.PloTools import plot_sites_visited, plot_cluster_shapes, plot_cluster_amplitudes
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
 from sklearn.neighbors import NearestNeighbors 
 from sklearn.metrics import silhouette_score
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
-import matplotlib.pyplot as plt
-from matplotlib.font_manager import FontProperties
-from matplotlib.ticker import MaxNLocator
-import seaborn           as sns
-
-sns.set_theme()
-
 kmeans_kwargs   = dict(init='random', n_init=10, max_iter=300, tol=1e-04, random_state=0)
 
 class CrySF:
     def __init__(self, timestep = 0.2, minv = 0.28, maxv = 3.05, 
-                 verbosity = 0, deltframes = 1, scaler = 'MinMaxScaler',
+                 verbosity = 0, deltframes = 1, structure = 'pure', scaler = 'MinMaxScaler',
                  clustering = 0,doped = 0):
      
         self.density_map_targ = 'DensityMap.dat'
@@ -33,9 +26,9 @@ class CrySF:
         self.verbosity = verbosity
         self.clustering = clustering
         self.doped = doped
+        self.struct = structure
         self.deltf = deltframes
         self.scaler = scaler
-        self.font_properties = FontProperties(family='serif', style='normal', weight='normal')
 
         self._site_analysis()
 
@@ -142,14 +135,10 @@ class CrySF:
 
     def _find_density_cutoff(self):
         self.density_values, self.xyz_map, self.index_voxels = self._read_density_map(self.density_map_targ)
-        print('>> Finding the density cutoff for clustering <<')
-        n, bins, _ = plt.hist(self.density_values, bins=30, alpha=0.7, color='blue')        
-        max_bin_index = np.argmax(n)
-        value_i = bins[max_bin_index]
-        value_s = bins[max_bin_index + 8]
+        print('>> Finding the density cutoff for clustering <<')       
         
-        self.cutoff_values = np.arange(value_i, value_s + value_i, value_i) 
-        plt.close()
+        step = 1/(self.n_frames*self.voxel_vol)
+        self.cutoff_values = np.arange(min(self.density_values), max(self.density_values)/2, step)
 
         for cut in self.cutoff_values:           
             mask = self.density_values > cut
@@ -160,93 +149,90 @@ class CrySF:
             # Get the number of clusters(sites) for the new density cutoff
             self.cut_labels = self._clustering_pbc(self.voxel_coor)
             self.n_clusters_cut = len(np.unique(self.cut_labels)) - (1 if -1 in self.cut_labels else 0) 
-
-            if self.n_clusters_cut >= self.n_atoms:                                                 
+            if self.n_clusters_cut >= self.n_atoms: 
+                print(f'\nCutoff: {cut:.4f}, Number of sites: {self.n_clusters_cut}')      
+                                                          
                 self.cluster_spatial_corr = self._sites_cova_pca(self.voxel_coor, self.cut_labels)
-              
-                max_variance = self.dl/2
-                delt_variance = []
                 
-                for i in range(self.cluster_spatial_corr.shape[1]):
-                    cluster_spatial = self.cluster_spatial_corr[:, i].reshape(-1,1)
-                    
-                    nn1d = NearestNeighbors(n_neighbors = 2).fit(cluster_spatial)
-                    distances_nn1d, _ = nn1d.kneighbors(cluster_spatial)
-                    distances_nn1d = np.sort(distances_nn1d[:, -1])[-1]
-                    delt_variance.append(distances_nn1d)
+                # Predict the correct number of type sites
+                all_clusters = np.arange(2, 10)
+                silhouette_averages = [] 
+                labels_shapes_aux =[]
+                
+                if self.scaler == 'MinMaxScaler':
+                    data = MinMaxScaler().fit_transform(self.cluster_spatial_corr)  
+                elif self.scaler == 'StandardScaler':
+                    data = StandardScaler().fit_transform(self.cluster_spatial_corr)
+                else:
+                    sys.exit('Error: Scaler method not recognized') 
 
-                if (delt_variance < max_variance).all():
-                    # Predict the correct number of type sites
-                    all_clusters = np.arange(2, 10)
-                    silhouette_averages = [] 
-                    labels_shapes_aux =[]
+                for n_clusters in all_clusters:                        
+                    clustering = KMeans(n_clusters=n_clusters,**kmeans_kwargs)                                             
+                    labels = clustering.fit_predict(data) 
+                    labels_shapes_aux.append(labels)
+                    silhouette_averages.append(silhouette_score(data, labels))                   
 
-                    if self.scaler == 'MinMaxScaler':
-                        data = MinMaxScaler().fit_transform(self.cluster_spatial_corr)  
-                    elif self.scaler == 'StandardScaler':
-                        data = StandardScaler().fit_transform(self.cluster_spatial_corr)
+                n_clusters = all_clusters[np.argmax(silhouette_averages)]
+                if (np.max(silhouette_averages) < 0.4):
+                    n_clusters = 1
+
+                if n_clusters > 1:
+                    self.labels_shapes = labels_shapes_aux[n_clusters - 2]
+                else:
+                    self.labels_shapes = np.zeros(len(labels_shapes_aux[0]), dtype=int)
+                
+                upper_size_limit = int(np.ceil(self.maxv/(self.voxel_vol)))  
+                lower_size_limit = int(np.ceil(self.minv/(self.voxel_vol)))                     
+
+                number_voxels =  Counter(self.cut_labels)
+
+                # Remove the key-value pair with key -1
+                if -1 in number_voxels:
+                    del number_voxels[-1]
+
+                wrong_sites = False
+                # Iterate through the Counter and check values
+                values_arr = []
+                for key, value in number_voxels.items():
+                    values_arr.append(value)  
+
+                for key, value in number_voxels.items():      
+                    if value > upper_size_limit or value < lower_size_limit:                            
+                        wrong_sites = True
+                        break
+
+                print(f'Volume limits: min {lower_size_limit*self.voxel_vol:.4f}, max {upper_size_limit*self.voxel_vol:.4f}')
+                print(f'Volumes found: min {min(values_arr)*self.voxel_vol:.4f}, max {max(values_arr)*self.voxel_vol:.4f}') 
+
+                coordinates = self.voxel_coor[self.cut_labels > -1]
+                labels = self.cut_labels[self.cut_labels > -1]
+                                    
+                count_labels_shapes = Counter(self.labels_shapes)
+                # ions% in each of type site could be different?
+                if self.struct == 'pure':
+                    unique_elements = [i for i, count in count_labels_shapes.items() if count <= np.ceil(self.n_atoms * 0.10)]
+                else:
+                    unique_elements = []
+                
+                if  wrong_sites or len(unique_elements) != 0:  
+                    continue
+                else:                  
+                    print('Final Density cutoff: {:.4f}'.format(cut)) 
+                    plot_cluster_shapes(self.cluster_spatial_corr,  self.labels_shapes) 
+
+                    smaller_site = 1
+                    if smaller_site == 1:
+                        self.jump_cut = self.cutoff_values[np.where(self.cutoff_values == cut)[0] + 0]
                     else:
-                        sys.exit('Error: Scaler method not recognized') 
+                        self.jump_cut = self.cutoff_values[np.where(self.cutoff_values == cut)[0] + 8]
 
-                    for n_clusters in all_clusters:                        
-                        clustering = KMeans(n_clusters=n_clusters,**kmeans_kwargs)                                             
-                        labels = clustering.fit_predict(data) 
-                        labels_shapes_aux.append(labels)
-                        silhouette_averages.append(silhouette_score(data, labels))                   
-
-                    n_clusters = all_clusters[np.argmax(silhouette_averages)]
-                    if (np.max(silhouette_averages) < 0.4):
-                        n_clusters = 1
-          
-                    if n_clusters > 1:
-                        self.labels_shapes = labels_shapes_aux[n_clusters - 2]
-                    else:
-                        self.labels_shapes = np.zeros(len(labels_shapes_aux[0]))
-
-                    upper_size_limit = int(np.ceil(self.maxv/(self.voxel_vol))) # volume of sphere with r=0.90 
-                    lower_size_limit = int(np.ceil(self.minv/(self.voxel_vol))) # volume of sphere with r=0.30                    
-
-                    number_voxels =  Counter(self.cut_labels)
-
-                    # Remove the key-value pair with key -1
-                    if -1 in number_voxels:
-                        del number_voxels[-1]
-
-                    wrong_sites = False
-                    # Iterate through the Counter and check values
-                    values_arr = []
-                    for key, value in number_voxels.items():
-                        values_arr.append(value)       
-                        if value > upper_size_limit or value < lower_size_limit:                            
-                            wrong_sites = True
-                            break
-                    
+                    # Write cluster map to be opened with OVITO 
                     coordinates = self.voxel_coor[self.cut_labels > -1]
                     labels = self.cut_labels[self.cut_labels > -1]
-                                        
-                    count_labels_shapes = Counter(self.labels_shapes)
-                    # ions% in each of type site could be different?
-                    unique_elements = [i for i, count in count_labels_shapes.items() if count <= np.ceil(self.n_atoms * 0.10)]
- 
-                    if  wrong_sites or len(unique_elements) != 0: 
-                        continue
-                    else:                  
-                        print('Final Density cutoff: {:.4f}'.format(cut)) 
-                        self._plot_cluster_shapes(self.cluster_spatial_corr, 'site_shapes_variance.png' ) 
-
-                        smaller_site = 1
-                        if smaller_site == 1:
-                            self.jump_cut = self.cutoff_values[np.where(self.cutoff_values == cut)[0] + 1]
-                        else:
-                            self.jump_cut = self.cutoff_values[np.where(self.cutoff_values == cut)[0] + 8]
-
-                        # Write cluster map to be opened with OVITO 
-                        coordinates = self.voxel_coor[self.cut_labels > -1]
-                        labels = self.cut_labels[self.cut_labels > -1]
-                        self._write_cluster_map(coordinates, labels, 'SitesMap_OVITO.dat')              
-                        break  
+                    self._write_cluster_map(coordinates, labels, 'sites_map_ovito.dat')              
+                    break  
     
-        if cut >= value_s and(wrong_sites or len(unique_elements) != 0):
+        if cut >= max(self.density_values)/2 and(wrong_sites or len(unique_elements) != 0):
             raise ValueError('\n!!Density cutoff not found!!\n Adjust voxel size or review trajectory\n')
 
     def _center_sites(self, voxel_coor, labels_cut):     
@@ -435,18 +421,24 @@ class CrySF:
         if average_negatives_per_row > 10:         
             sys.exit(f'Suggestion: Increase -deltf (current -1 average count per line: {average_negatives_per_row})')   
 
+        jump_counts = defaultdict(int)
+
         for atom_path in atoms_paths_filtered:            
             # Calculating simultaneous jumps
             atom_paths_not_noise = atom_path[atom_path >= 0]
-            atom_paths_original_indices = np.where(atom_path >= 0)[0]  
+            atom_paths_original_indices = np.where(atom_path >= 0)[0]
+
             site_change = np.where(atom_paths_not_noise[:-1] != atom_paths_not_noise[1:])[0]
-            
             sites_changes_i = atom_paths_original_indices[site_change]
             sites_changes_f = atom_paths_original_indices[site_change + 1]
 
             # simultaneous jumps calculation ends
             jump_site_labels_i = atom_path[sites_changes_i]
             jump_site_labels_f = atom_path[sites_changes_f]
+
+            for start, end in zip(jump_site_labels_i+1, jump_site_labels_f+1):
+                jump = tuple(sorted((start, end)))
+                jump_counts[jump] += 1            
             
             sites_changes_back = np.where(jump_site_labels_i[:-1] == jump_site_labels_f[1:])[0]   
             
@@ -465,6 +457,12 @@ class CrySF:
             atoms_jumps_reverse_indices.append(len(np.unique(sites_changes_back)))
 
             sites_visited_atom.append(len(np.unique(atom_paths_not_noise)))
+
+        # Write to path_info.dat
+        with open(self.jumping_path_file, "w") as f:
+            f.write("#initial_label  final_label  occurrence\n")
+            for (i, j), count in sorted(jump_counts.items()):
+                f.write(f"{i:<14}{j:<13}{count}\n")
 
         #Number of simultaneous jumps according "prl 116, 135901 (2016)".
         ns_jumps = np.sum(np.array(njumps_time), axis=0)
@@ -540,7 +538,7 @@ class CrySF:
             for key, value in sorted_items:
                 file.write(f"{key:10.4f}  {value:10.4f}\n")
     
-    def _write_jumps(self, Njumps, RNjumps, SNjumps, output_jumpsinfo_filename, output_stringjumps_filename): 
+    def _write_jumps_info(self, Njumps, RNjumps, SNjumps, output_jumpsinfo_filename, output_stringjumps_filename): 
         self_corr = np.divide(RNjumps, Njumps, where=Njumps!=0, out=np.full_like(RNjumps, np.nan, dtype=float))
         self_corr = np.nan_to_num(self_corr, nan=-1)  
 
@@ -563,63 +561,6 @@ class CrySF:
                 )
                 file.write(formatted_row + "\n")
                 i += 1
-               
-    def _plot_cluster_data(self, amplitud_values, output_filename):
-        
-        amplitud_indices = range(len(amplitud_values))
-        
-        fig, ax = plt.subplots(figsize=(8.0, 8.0))        
-        ax.scatter(amplitud_indices, amplitud_values, c = self.labels_shapes, cmap='rainbow', edgecolor='k', s = 40)
-        ax.set_xlabel('Site Index', fontproperties=self.font_properties, fontsize=30)
-        ax.set_ylabel('Site amplitude (A)', fontproperties=self.font_properties, fontsize=30)
-        ax.tick_params(axis='both', labelsize=20, labelrotation=0)
-
-        fig.tight_layout()        
-        plt.savefig(output_filename)
-        plt.close()
-    
-    def _plot_cluster_shapes(self, variances, output_filename):
-        title = 'Site shapes variance'
-        fig = plt.figure(figsize=(10.0, 8.0))
-        ax = fig.add_subplot(111, projection='3d')   
-
-        ax.scatter(variances[:, 0],
-                   variances[:, 1],
-                   variances[:, 2],
-                   c = self.labels_shapes,
-                   cmap='rainbow', edgecolor='k', s=40)
-            
-        ax.set_title(title,fontproperties=self.font_properties, fontsize=20, fontweight='bold')
-        ax.set_xlabel('x', fontproperties=self.font_properties, fontsize=14)
-        ax.set_ylabel('y', fontproperties=self.font_properties, fontsize=14)
-        ax.set_zlabel('z', fontproperties=self.font_properties, fontsize=14)
-        ax.tick_params(axis='both', which='major', labelsize=12)
-        plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
-
-        fig.tight_layout()        
-        plt.savefig(output_filename, bbox_inches='tight')
-        plt.close()
-
-    def _plot_sites_visited(self, sites_visited):
-        #Count occurrences of each unique value
-        unique_values, counts = np.unique(sites_visited, return_counts=True)
-        fig, ax = plt.subplots(figsize=(8.0, 8.0))
-
-        # Plot histogram as bars for each unique value
-        ax.bar(unique_values, counts, color='b', alpha=0.7, edgecolor='k', width=0.8)
-
-        ax.set_xlabel('Number of sites visited', fontsize=30)
-        ax.set_ylabel('Number of Atoms',fontproperties = self.font_properties, fontsize=30)
-        # Set x-axis limits to (min-1) and (max+1) of the data
-        ax.set_xlim([min(unique_values) - 1, max(unique_values) + 1])
-        # Ensure y-axis has integer values only
-        ax.xaxis.set_major_locator(MaxNLocator(integer=True))
-        ax.yaxis.set_major_locator(MaxNLocator(integer=True))
-
-        ax.tick_params(axis='both', labelsize=20, labelrotation=0)
-        fig.tight_layout()
-        plt.savefig('sites_visited.png')
-        plt.close()
         
     def _process_extra_data(self, density_maps, sites_outputs, voxels_visited, jumpsinfos,
                             simultaneousjumps, stringfreq):     
@@ -679,7 +620,7 @@ class CrySF:
             print(f'Time interval between frame intervals: {self.time_frames * self.deltf:.4f}')
             print(f'Updated total time: {self.total_time_updated:.4f}')
             
-            self._write_jumps(total_jupms, reverse_jumps, simultaneous_jumps,\
+            self._write_jumps_info(total_jupms, reverse_jumps, simultaneous_jumps,\
                                jumpsinfo, simultaneousjump)
 
 
@@ -736,14 +677,20 @@ class CrySF:
                 site_specific_info = info[info[:, 3] == site_type]              
                 print(f'Label site: {int(site_type)}, Number of Sites: {len(site_specific_info)}')
             
-            self._plot_cluster_data(self.amplitud_sites, 'site_amplitudes.png')
+            plot_cluster_amplitudes(self.amplitud_sites, self.labels_shapes)
+            
+            self.jumps_file = 'jump_coefficient.dat'            
+            self.simultaneous_jumps_file = 'simultaneous_jumps.dat'
+            self.string_freq_file = 'string_frequency.dat'
+            self.jumping_path_file = 'jumping_path.dat'
+
 
             self.total_jupms, self.reverse_jumps, self.simultaneous_jumps,\
                   self.average_probabilities, self.sites_visited_atom =\
                   self._atom_jumps(self.voxel_indices_time, self.cut_labels,\
                                     self.voxel_indices, self.n_frames)
 
-            self._plot_sites_visited(self.sites_visited_atom)
+            plot_sites_visited(self.sites_visited_atom)
 
             print(f'\nReading file: {self.voxels_visited_file}')
             print('>> Trajectory data <<')
@@ -751,20 +698,18 @@ class CrySF:
             print(f'Time step VoxelIndices: {self.time_frames}')
                        
             ############   
-            self.jumps_file = 'jumps_info.dat'            
-            self.simultaneous_jumps_file = 'simultaneous_jumps.dat'
-            self.string_freq_file = 'string_frequency.dat'
 
             print(f'\nWriting file: {self.jumps_file}')
             print(f'Writing file: {self.simultaneous_jumps_file}')
             print(f'Writing file: {self.string_freq_file}') 
+            print(f'Writing file: {self.jumping_path_file}') 
             
 
             print(f'\nFrames interval: {self.deltf:d}')
             print(f'Time interval between frame intervals: {self.time_frames * self.deltf:.4f}')            
             print(f'Updated total time: {self.total_time_updated:.4f}')
 
-            self._write_jumps(self.total_jupms, self.reverse_jumps, self.simultaneous_jumps,\
+            self._write_jumps_info(self.total_jupms, self.reverse_jumps, self.simultaneous_jumps,\
                                self.jumps_file, self.simultaneous_jumps_file)
                    
             self._write_string_freq(self.average_probabilities, self.string_freq_file)
